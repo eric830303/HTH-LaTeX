@@ -1,0 +1,107 @@
+ 
+\documentclass[10pt, conference]{IEEEtran}
+% Some/most Computer Society conferences require the compsoc mode option,
+% but others may want the standard conference format.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference,compsoc]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+
+
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{multirow}
+%LaTeX package conflicts with several others over the use of the algorithm identifier.  
+%A common indicator is something like this message: Too many }'s.l.1616     }
+%To resolve the issues, simply put the following just before the inclusion of the algorithm2
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[linesnumbered,boxed,ruled]{algorithm2e}
+\usepackage{csquotes}
+\usepackage[style=ieee,backend=bibtex8,maxnames=3,minnames=1,sorting=none]{biblatex}
+\usepackage[version=4]{mhchem}
+\usepackage[bottom]{footmisc}
+\usepackage[normalem]{ulem}
+\usepackage{afterpage}
+\usepackage{comment}
+% graphics path
+\graphicspath{{figures/}}
+% figure name bold
+\renewcommand{\figurename}{\textbf{Figure}}
+% table name bold
+\renewcommand{\tablename}{\textbf{Table}}
+% footnote mark
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+% add bib resource
+\addbibresource{main.bib} 
+% class format
+\newtheoremstyle{mystyle}  % Name
+  {}%                                     % Space above
+  {}%                                     % Space below
+  {}%                                     % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                       % Theorem head font
+  {:}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {}%                                     % Theorem head spec (can be left empty, meaning `normal')
+\theoremstyle{mystyle}
+\newtheorem{class}{Class}
+%bibtex font size
+\renewcommand*{\bibfont}{\footnotesize}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{Lifetime Reliability Trojan based on Exploring Malicious Aging}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Tien-Hung Tseng and Kai-Chiang Wu}
+\IEEEauthorblockA{Department of Computer Science\\
+National Chiao Tung University, Hsinchu, Taiwan \\
+E-mail: \{eric830303.cs05g@g2.nctu.edu.tw and kcw@cs.nctu.edu.tw\}}
+}
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract
+\input abstract
+
+\IEEEpeerreviewmaketitle
+
+
+
+\printbibliography
+
+
+
+
+% that's all folks
+\end{document}
+
+
