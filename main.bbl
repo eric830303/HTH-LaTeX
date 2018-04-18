@@ -1,0 +1,298 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{none/global/}
+  \entry{kumar2007nbti}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=KSV}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Sanjay\bibnamedelima V},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=KCH}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Chris\bibnamedelima H},
+         giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SSS}{%
+         family={Sapatnekar},
+         familyi={S\bibinitperiod},
+         given={Sachin\bibnamedelima S},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KSVKCHSSS1}
+    \strng{fullhash}{KSVKCHSSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc. of DAC}
+    \field{pages}{370\bibrangedash 375}
+    \field{title}{{NBTI}-aware synthesis of digital circuits}
+    \field{month}{06}
+    \field{year}{2007}
+  \endentry
+
+  \entry{paul2006temporal}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=PBC}{%
+         family={Paul},
+         familyi={P\bibinitperiod},
+         given={Bipul\bibnamedelima C},
+         giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Kunhyuk},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kufluoglu},
+         familyi={K\bibinitperiod},
+         given={Haldun},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=AMA}{%
+         family={Alam},
+         familyi={A\bibinitperiod},
+         given={Muhammad\bibnamedelima Ashraful},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Roy},
+         familyi={R\bibinitperiod},
+         given={Kaushik},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PBC+1}
+    \strng{fullhash}{PBCKKKHAMARK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc. of DATE}
+    \field{pages}{780\bibrangedash 785}
+    \field{title}{Temporal performance degradation under {NBTI}: estimation and
+  design for improved reliability of nanoscale circuits}
+    \field{month}{03}
+    \field{year}{2006}
+  \endentry
+
+  \entry{kang2007efficient}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=KK}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Kunhyuk},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kufluoglu},
+         familyi={K\bibinitperiod},
+         given={Haldun},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=AMA}{%
+         family={Alam},
+         familyi={A\bibinitperiod},
+         given={Muhammad\bibnamedelima Ashraful},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Roy},
+         familyi={R\bibinitperiod},
+         given={Kaushik},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KK+1}
+    \strng{fullhash}{KKKHAMARK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc. of ICCD}
+    \field{pages}{216\bibrangedash 221}
+    \field{title}{Efficient transistor-level sizing technique under temporal
+  performance degradation due to {NBTI}}
+    \field{month}{10}
+    \field{year}{2007}
+  \endentry
+
+  \entry{yang2007combating}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=YX}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Xiangning},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Saluja},
+         familyi={S\bibinitperiod},
+         given={Kewal},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YXSK1}
+    \strng{fullhash}{YXSK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc. of ISQED}
+    \field{pages}{47\bibrangedash 52}
+    \field{title}{Combating {NBTI} degradation via gate sizing}
+    \field{month}{03}
+    \field{year}{2007}
+  \endentry
+
+  \entry{huang2013low}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HSH}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Shih-Hsu},
+         giveni={S\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=TWP}{%
+         family={Tu},
+         familyi={T\bibinitperiod},
+         given={Wen-Pin},
+         giveni={W\bibinitperiod-P\bibinitperiod},
+      }}%
+      {{hash=CCM}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Chia-Ming},
+         giveni={C\bibinitperiod-M\bibinitperiod},
+      }}%
+      {{hash=PSB}{%
+         family={Pan},
+         familyi={P\bibinitperiod},
+         given={Song-Bin},
+         giveni={S\bibinitperiod-B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HSH+1}
+    \strng{fullhash}{HSHTWPCCMPSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{27}
+    \field{title}{Low-power anti-aging zero skew clock gating}
+    \field{volume}{18}
+    \field{journaltitle}{ACM TODAES}
+    \field{month}{03}
+    \field{year}{2013}
+  \endentry
+
+  \entry{chakraborty2013skew}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CA}{%
+         family={Chakraborty},
+         familyi={C\bibinitperiod},
+         given={Ashutosh},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PDZ}{%
+         family={Pan},
+         familyi={P\bibinitperiod},
+         given={David\bibnamedelima Z},
+         giveni={D\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CAPDZ1}
+    \strng{fullhash}{CAPDZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{918\bibrangedash 927}
+    \field{title}{Skew management of {NBTI} impacted gated clock trees}
+    \field{volume}{32}
+    \field{journaltitle}{IEEE TCAD}
+    \field{month}{06}
+    \field{year}{2013}
+  \endentry
+
+  \entry{chen2013novel}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=CJ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Jifeng},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tehranipoor},
+         familyi={T\bibinitperiod},
+         given={Mohammad},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJTM1}
+    \strng{fullhash}{CJTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proc. of ISQED}
+    \field{pages}{327\bibrangedash 334}
+    \field{title}{A novel flow for reducing clock skew considering {NBTI}
+  effect and process variations}
+    \field{month}{03}
+    \field{year}{2013}
+  \endentry
+
+  \entry{lai2014bti}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LL}{%
+         family={Lai},
+         familyi={L\bibinitperiod},
+         given={Liangzhen},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Chandra},
+         familyi={C\bibinitperiod},
+         given={Vikas},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Aitken},
+         familyi={A\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Puneet},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LL+1}
+    \strng{fullhash}{LLCVARGP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{180\bibrangedash 189}
+    \field{title}{{BTI}-Gater: An aging-resilient clock gating methodology}
+    \field{volume}{4}
+    \field{journaltitle}{IEEE Journal on Emerging and Selected Topics in
+  Circuits and Systems}
+    \field{month}{06}
+    \field{year}{2014}
+  \endentry
+\endsortlist
+\endinput
