@@ -17,223 +17,104 @@
 \endgroup
 
 \sortlist[entry]{none/global/}
-  \entry{kumar2007nbti}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=KSV}{%
-         family={Kumar},
-         familyi={K\bibinitperiod},
-         given={Sanjay\bibnamedelima V},
-         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+  \entry{wilson2013international}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WL}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Linda},
+         giveni={L\bibinitperiod},
       }}%
-      {{hash=KCH}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Chris\bibnamedelima H},
-         giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+    }
+    \strng{namehash}{WL1}
+    \strng{fullhash}{WL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{International technology roadmap for semiconductors (ITRS)}
+    \field{journaltitle}{Semiconductor Industry Association}
+    \field{year}{2013}
+  \endentry
+
+  \entry{tehranipoor2011trustworthy}{article}{}
+    \name{author}{7}{}{%
+      {{hash=TM}{%
+         family={Tehranipoor},
+         familyi={T\bibinitperiod},
+         given={Mohammad},
+         giveni={M\bibinitperiod},
       }}%
-      {{hash=SSS}{%
-         family={Sapatnekar},
+      {{hash=SH}{%
+         family={Salmani},
          familyi={S\bibinitperiod},
-         given={Sachin\bibnamedelima S},
-         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KSVKCHSSS1}
-    \strng{fullhash}{KSVKCHSSS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of DAC}
-    \field{pages}{370\bibrangedash 375}
-    \field{title}{{NBTI}-aware synthesis of digital circuits}
-    \field{month}{06}
-    \field{year}{2007}
-  \endentry
-
-  \entry{paul2006temporal}{inproceedings}{}
-    \name{author}{5}{}{%
-      {{hash=PBC}{%
-         family={Paul},
-         familyi={P\bibinitperiod},
-         given={Bipul\bibnamedelima C},
-         giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-      {{hash=KK}{%
-         family={Kang},
-         familyi={K\bibinitperiod},
-         given={Kunhyuk},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=KH}{%
-         family={Kufluoglu},
-         familyi={K\bibinitperiod},
-         given={Haldun},
+         given={Hassan},
          giveni={H\bibinitperiod},
       }}%
-      {{hash=AMA}{%
-         family={Alam},
-         familyi={A\bibinitperiod},
-         given={Muhammad\bibnamedelima Ashraful},
-         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=RK}{%
-         family={Roy},
-         familyi={R\bibinitperiod},
-         given={Kaushik},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{PBC+1}
-    \strng{fullhash}{PBCKKKHAMARK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of DATE}
-    \field{pages}{780\bibrangedash 785}
-    \field{title}{Temporal performance degradation under {NBTI}: estimation and
-  design for improved reliability of nanoscale circuits}
-    \field{month}{03}
-    \field{year}{2006}
-  \endentry
-
-  \entry{kang2007efficient}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=KK}{%
-         family={Kang},
-         familyi={K\bibinitperiod},
-         given={Kunhyuk},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=KH}{%
-         family={Kufluoglu},
-         familyi={K\bibinitperiod},
-         given={Haldun},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=AMA}{%
-         family={Alam},
-         familyi={A\bibinitperiod},
-         given={Muhammad\bibnamedelima Ashraful},
-         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=RK}{%
-         family={Roy},
-         familyi={R\bibinitperiod},
-         given={Kaushik},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KK+1}
-    \strng{fullhash}{KKKHAMARK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ICCD}
-    \field{pages}{216\bibrangedash 221}
-    \field{title}{Efficient transistor-level sizing technique under temporal
-  performance degradation due to {NBTI}}
-    \field{month}{10}
-    \field{year}{2007}
-  \endentry
-
-  \entry{yang2007combating}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=YX}{%
-         family={Yang},
-         familyi={Y\bibinitperiod},
-         given={Xiangning},
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xuehui},
          giveni={X\bibinitperiod},
       }}%
-      {{hash=SK}{%
-         family={Saluja},
-         familyi={S\bibinitperiod},
-         given={Kewal},
+      {{hash=WM}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Karri},
+         familyi={K\bibinitperiod},
+         given={Ramesh},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rajendran},
+         familyi={R\bibinitperiod},
+         given={Jeyavijayan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Rosenfeld},
+         familyi={R\bibinitperiod},
+         given={Kurt},
          giveni={K\bibinitperiod},
       }}%
     }
-    \strng{namehash}{YXSK1}
-    \strng{fullhash}{YXSK1}
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{TM+1}
+    \strng{fullhash}{TMSHZXWMKRRJRK1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ISQED}
-    \field{pages}{47\bibrangedash 52}
-    \field{title}{Combating {NBTI} degradation via gate sizing}
-    \field{month}{03}
-    \field{year}{2007}
+    \field{number}{7}
+    \field{pages}{66\bibrangedash 74}
+    \field{title}{Trustworthy hardware: Trojan detection and design-for-trust
+  challenges}
+    \field{volume}{44}
+    \field{journaltitle}{Computer}
+    \field{year}{2011}
   \endentry
 
-  \entry{huang2013low}{article}{}
+  \entry{karri2010trustworthy}{article}{}
     \name{author}{4}{}{%
-      {{hash=HSH}{%
-         family={Huang},
-         familyi={H\bibinitperiod},
-         given={Shih-Hsu},
-         giveni={S\bibinitperiod-H\bibinitperiod},
+      {{hash=KR}{%
+         family={Karri},
+         familyi={K\bibinitperiod},
+         given={Ramesh},
+         giveni={R\bibinitperiod},
       }}%
-      {{hash=TWP}{%
-         family={Tu},
-         familyi={T\bibinitperiod},
-         given={Wen-Pin},
-         giveni={W\bibinitperiod-P\bibinitperiod},
-      }}%
-      {{hash=CCM}{%
-         family={Chang},
-         familyi={C\bibinitperiod},
-         given={Chia-Ming},
-         giveni={C\bibinitperiod-M\bibinitperiod},
-      }}%
-      {{hash=PSB}{%
-         family={Pan},
-         familyi={P\bibinitperiod},
-         given={Song-Bin},
-         giveni={S\bibinitperiod-B\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HSH+1}
-    \strng{fullhash}{HSHTWPCCMPSB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{2}
-    \field{pages}{27}
-    \field{title}{Low-power anti-aging zero skew clock gating}
-    \field{volume}{18}
-    \field{journaltitle}{ACM TODAES}
-    \field{month}{03}
-    \field{year}{2013}
-  \endentry
-
-  \entry{chakraborty2013skew}{article}{}
-    \name{author}{2}{}{%
-      {{hash=CA}{%
-         family={Chakraborty},
-         familyi={C\bibinitperiod},
-         given={Ashutosh},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=PDZ}{%
-         family={Pan},
-         familyi={P\bibinitperiod},
-         given={David\bibnamedelima Z},
-         giveni={D\bibinitperiod\bibinitdelim Z\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CAPDZ1}
-    \strng{fullhash}{CAPDZ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{6}
-    \field{pages}{918\bibrangedash 927}
-    \field{title}{Skew management of {NBTI} impacted gated clock trees}
-    \field{volume}{32}
-    \field{journaltitle}{IEEE TCAD}
-    \field{month}{06}
-    \field{year}{2013}
-  \endentry
-
-  \entry{chen2013novel}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=CJ}{%
-         family={Chen},
-         familyi={C\bibinitperiod},
-         given={Jifeng},
+      {{hash=RJ}{%
+         family={Rajendran},
+         familyi={R\bibinitperiod},
+         given={Jeyavijayan},
          giveni={J\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Rosenfeld},
+         familyi={R\bibinitperiod},
+         given={Kurt},
+         giveni={K\bibinitperiod},
       }}%
       {{hash=TM}{%
          family={Tehranipoor},
@@ -242,57 +123,346 @@
          giveni={M\bibinitperiod},
       }}%
     }
-    \strng{namehash}{CJTM1}
-    \strng{fullhash}{CJTM1}
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KR+1}
+    \strng{fullhash}{KRRJRKTM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of ISQED}
-    \field{pages}{327\bibrangedash 334}
-    \field{title}{A novel flow for reducing clock skew considering {NBTI}
-  effect and process variations}
-    \field{month}{03}
-    \field{year}{2013}
+    \field{number}{10}
+    \field{pages}{39\bibrangedash 46}
+    \field{title}{Trustworthy hardware: Identifying and classifying hardware
+  trojans}
+    \field{volume}{43}
+    \field{journaltitle}{Computer}
+    \field{year}{2010}
   \endentry
 
-  \entry{lai2014bti}{article}{}
-    \name{author}{4}{}{%
-      {{hash=LL}{%
-         family={Lai},
-         familyi={L\bibinitperiod},
-         given={Liangzhen},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=CV}{%
-         family={Chandra},
-         familyi={C\bibinitperiod},
-         given={Vikas},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=AR}{%
-         family={Aitken},
+  \entry{adee2008hunt}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AS}{%
+         family={Adee},
          familyi={A\bibinitperiod},
-         given={Robert},
+         given={Sally},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{AS1}
+    \strng{fullhash}{AS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{34\bibrangedash 39}
+    \field{title}{The hunt for the kill switch}
+    \field{volume}{45}
+    \field{journaltitle}{IEEE Spectrum}
+    \field{year}{2008}
+  \endentry
+
+  \entry{bhunia2014hardware}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BS}{%
+         family={Bhunia},
+         familyi={B\bibinitperiod},
+         given={Swarup},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HMS}{%
+         family={Hsiao},
+         familyi={H\bibinitperiod},
+         given={Michael\bibnamedelima S},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Banga},
+         familyi={B\bibinitperiod},
+         given={Mainak},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Narasimhan},
+         familyi={N\bibinitperiod},
+         given={Seetharam},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{BS+1}
+    \strng{fullhash}{BSHMSBMNS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{8}
+    \field{pages}{1229\bibrangedash 1247}
+    \field{title}{Hardware Trojan attacks: threat analysis and countermeasures}
+    \field{volume}{102}
+    \field{journaltitle}{Proceedings of the IEEE}
+    \field{year}{2014}
+  \endentry
+
+  \entry{shiyanovskii2010process}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=SY}{%
+         family={Shiyanovskii},
+         familyi={S\bibinitperiod},
+         given={Yuriy},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WF}{%
+         family={Wolff},
+         familyi={W\bibinitperiod},
+         given={F},
+         giveni={F},
+      }}%
+      {{hash=RA}{%
+         family={Rajendran},
+         familyi={R\bibinitperiod},
+         given={Aravind},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Papachristou},
+         familyi={P\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=WD}{%
+         family={Weyer},
+         familyi={W\bibinitperiod},
+         given={D},
+         giveni={D},
+      }}%
+      {{hash=CW}{%
+         family={Clay},
+         familyi={C\bibinitperiod},
+         given={W},
+         giveni={W},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SY+1}
+    \strng{fullhash}{SYWFRAPCWDCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Adaptive Hardware and Systems (AHS), 2010 NASA/ESA
+  Conference on}
+    \field{pages}{215\bibrangedash 222}
+    \field{title}{Process reliability based trojans through NBTI and HCI
+  effects}
+    \field{year}{2010}
+  \endentry
+
+  \entry{sreedhar2012reliability}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SA}{%
+         family={Sreedhar},
+         familyi={S\bibinitperiod},
+         given={Aswin},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kundu},
+         familyi={K\bibinitperiod},
+         given={Sandip},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KI}{%
+         family={Koren},
+         familyi={K\bibinitperiod},
+         given={Israel},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Scientific Publishers}%
+    }
+    \strng{namehash}{SAKSKI1}
+    \strng{fullhash}{SAKSKI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{674\bibrangedash 683}
+    \field{title}{On reliability Trojan injection and detection}
+    \field{volume}{8}
+    \field{journaltitle}{Journal of Low Power Electronics}
+    \field{year}{2012}
+  \endentry
+
+  \entry{yang2016a2}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=YK}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Kaiyuan},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hicks},
+         familyi={H\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DQ}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Qing},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=AT}{%
+         family={Austin},
+         familyi={A\bibinitperiod},
+         given={Todd},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Sylvester},
+         familyi={S\bibinitperiod},
+         given={Dennis},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{YK+1}
+    \strng{fullhash}{YKHMDQATSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Security and Privacy (SP), 2016 IEEE Symposium on}
+    \field{pages}{18\bibrangedash 37}
+    \field{title}{A2: Analog malicious hardware}
+    \field{year}{2016}
+  \endentry
+
+  \entry{karimi2015magic}{article}{}
+    \name{author}{5}{}{%
+      {{hash=KN}{%
+         family={Karimi},
+         familyi={K\bibinitperiod},
+         given={Naghmeh},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=KAK}{%
+         family={Kanuparthi},
+         familyi={K\bibinitperiod},
+         given={Arun\bibnamedelima Karthik},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=WX}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Xueyang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SO}{%
+         family={Sinanoglu},
+         familyi={S\bibinitperiod},
+         given={Ozgur},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Karri},
+         familyi={K\bibinitperiod},
+         given={Ramesh},
          giveni={R\bibinitperiod},
       }}%
-      {{hash=GP}{%
-         family={Gupta},
-         familyi={G\bibinitperiod},
-         given={Puneet},
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{KN+1}
+    \strng{fullhash}{KNKAKWXSOKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{5}
+    \field{title}{MAGIC: Malicious aging in circuits/cores}
+    \field{volume}{12}
+    \field{journaltitle}{ACM Transactions on Architecture and Code Optimization
+  (TACO)}
+    \field{year}{2015}
+  \endentry
+
+  \entry{burman2012effect}{incollection}{}
+    \name{author}{5}{}{%
+      {{hash=BS}{%
+         family={Burman},
+         familyi={B\bibinitperiod},
+         given={Sanjay},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Palchaudhuri},
+         familyi={P\bibinitperiod},
+         given={Ayan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CRS}{%
+         family={Chakraborty},
+         familyi={C\bibinitperiod},
+         given={Rajat\bibnamedelima Subhra},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mukhopadhyay},
+         familyi={M\bibinitperiod},
+         given={Debdeep},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Singh},
+         familyi={S\bibinitperiod},
+         given={Pranav},
          giveni={P\bibinitperiod},
       }}%
     }
-    \strng{namehash}{LL+1}
-    \strng{fullhash}{LLCVARGP1}
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{BS+2}
+    \strng{fullhash}{BSPACRSMDSP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{number}{2}
-    \field{pages}{180\bibrangedash 189}
-    \field{title}{{BTI}-Gater: An aging-resilient clock gating methodology}
-    \field{volume}{4}
-    \field{journaltitle}{IEEE Journal on Emerging and Selected Topics in
-  Circuits and Systems}
-    \field{month}{06}
-    \field{year}{2014}
+    \field{booktitle}{Progress in VLSI Design and Test}
+    \field{pages}{190\bibrangedash 197}
+    \field{title}{Effect of malicious hardware logic on circuit reliability}
+    \field{year}{2012}
+  \endentry
+
+  \entry{wei2013undetectable}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=WS}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Sheng},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Potkonjak},
+         familyi={P\bibinitperiod},
+         given={Miodrag},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{WSPM1}
+    \strng{fullhash}{WSPM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 50th Annual Design Automation
+  Conference}
+    \field{pages}{144}
+    \field{title}{The undetectable and unprovable hardware trojan horse}
+    \field{year}{2013}
   \endentry
 \endsortlist
 \endinput
