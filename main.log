@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  20 APR 2018 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  20 APR 2018 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -912,7 +912,11 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `sec:correlation' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
@@ -1081,6 +1085,7 @@ File: figures/algorithm2.png Graphic file (type png)
 Package pdftex.def Info: figures/algorithm2.png used on input line 12.
 (pdftex.def)             Requested size: 201.60077pt x 138.93892pt.
  [5 <./figures/SAT.png> <./figures/SAT_grp.png>])
+(./correlation.tex) [6 <./figures/algorithm1.png> <./figures/algorithm2.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1092,9 +1097,12 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
+[7
 
- <./figures/algorithm1.png> <./figures/algorithm2.png>] (./main.aux)
+] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -1104,13 +1112,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20623 strings out of 492995
- 387173 string characters out of 6132703
+ 20641 strings out of 492995
+ 387564 string characters out of 6132703
  672491 words of memory out of 5000000
- 23942 multiletter control sequences out of 15000+600000
- 564794 words of font info for 82 fonts, out of 8000000 for 9000
+ 23956 multiletter control sequences out of 15000+600000
+ 565872 words of font info for 83 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 45i,10n,45p,10375b,12033s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,10n,45p,10375b,12036s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
@@ -1122,10 +1130,10 @@ l/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 1004786 bytes).
+Output written on main.pdf (7 pages, 1013375 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

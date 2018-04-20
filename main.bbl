@@ -506,5 +506,133 @@
   aging}
     \field{year}{2007}
   \endentry
+
+  \entry{kiamehr2016impact}{inproceedings}{}
+    \name{author}{8}{}{%
+      {{hash=KS}{%
+         family={Kiamehr},
+         familyi={K\bibinitperiod},
+         given={Saman},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Weckx},
+         familyi={W\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tahoori},
+         familyi={T\bibinitperiod},
+         given={Mehdi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kaczer},
+         familyi={K\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kukner},
+         familyi={K\bibinitperiod},
+         given={Halil},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Raghavan},
+         familyi={R\bibinitperiod},
+         given={Praveen},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Groeseneken},
+         familyi={G\bibinitperiod},
+         given={Guido},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Catthoor},
+         familyi={C\bibinitperiod},
+         given={Francky},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KS+1}
+    \strng{fullhash}{KSWPTMKBKHRPGGCF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Reliability Physics Symposium (IRPS), 2016 IEEE
+  International}
+    \field{pages}{CR\bibrangedash 1}
+    \field{title}{The impact of process variation and stochastic aging in
+  nanoscale VLSI}
+    \field{year}{2016}
+  \endentry
+
+  \entry{chen2013novel}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=CJ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Jifeng},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tehranipoor},
+         familyi={T\bibinitperiod},
+         given={Mohammad},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CJTM1}
+    \strng{fullhash}{CJTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Quality Electronic Design (ISQED), 2013 14th
+  International Symposium on}
+    \field{pages}{327\bibrangedash 334}
+    \field{title}{A novel flow for reducing clock skew considering nbti effect
+  and process variations}
+    \field{year}{2013}
+  \endentry
+
+  \entry{gomez2016early}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GAF}{%
+         family={Gomez},
+         familyi={G\bibinitperiod},
+         given={Andres\bibnamedelima F},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Champac},
+         familyi={C\bibinitperiod},
+         given={Victor},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{GAFCV1}
+    \strng{fullhash}{GAFCV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{7}
+    \field{pages}{2438\bibrangedash 2448}
+    \field{title}{Early selection of critical paths for reliable nbti
+  aging-delay monitoring}
+    \field{volume}{24}
+    \field{journaltitle}{IEEE Transactions on Very Large Scale Integration
+  (VLSI) Systems}
+    \field{year}{2016}
+  \endentry
 \endsortlist
 \endinput

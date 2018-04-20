@@ -1,0 +1,54 @@
+ %--------------------------------- Experimental Results ----------------------------------------------------------------
+% (10)
+\section{CORRELATION BETWEEN PV AND AGING}
+\label{sec:correlation}
+\subsection{Impact of PV on BTI}
+\label{sec:correlation}
+In this section, we discuss the influence of process variation (PV) on BTI. Other works \cite{kiamehr2016impact}\cite{chen2013novel} do consider the PV effect while performing Monte-Carlo simulations, but ignore the correlation \cite{kiamehr2016impact} between PV and BTI. The correlation is a long-term phenomenon that bridge the Vth differences among the transistors over a period. Further, a positive/negative Vth offset leads to a higher/lower fresh Vth, causing a lower/higher aging speed. Therefore, the gap between high and low Vth will be gradually converged, letting threshold voltages of transistors, whose fresh ones are different, reach a convergent value.
+
+\subsection{Model of the Correlation}
+A model in~\cite{gomez2016early} is proposed to estimate the correlation between fresh V\textsubscript{th} offset and BTI effects:
+\begin{equation}
+	\centering
+	\Delta V_{th\_nbti} = (1 - S_{v} \cdot \Delta V_{th\_pv})  \cdot A \cdot a^n \cdot t^n
+	\label{eq:cor}
+\end{equation}
+\begin{equation}
+	\centering
+	V_{th} = \Delta V_{th\_nbti} + \Delta V_{th\_pv} + V_{th\_design}
+	\label{eq:conv}
+\end{equation}
+$\Delta V_{th\_pv}$ denotes the fresh V\textsubscript{th} due to PV. $\Delta V_{th\_nbti}$ denotes the BTI-induced V\textsubscript{th} shift and $V_{th\_design}$ denotes the nominal threshold voltage of the design. $S_{v}$ depends on $\Delta V_{th\_pv}$, and can be derived by following procedures:
+
+\paragraph{Assume the value of $V_{th}$ is convergent}
+We assume threshold voltages of all transistors will be convergent after a long period, even if their fresh values are different. In other words, $V_{th}$ is fixed regardless of various $\Delta V_{th\_pv}$, since the aforementioned correlation takes effect. 
+
+\paragraph{Obtain the convergent value of $V_{th}$}
+Since $V_{th}$ is fixed regardless of various $\Delta V_{th\_pv}$, we set $\Delta V_{th\_pv}$ to 0 in Equation~(\ref{eq:conv}) to derive the convergent value of $V_{th}$. This way, Equation~(\ref{eq:conv}) can be simplified as Equation~(\ref{eq:conv2}), where the convergent value of $V_{th}$ equals $\Delta V_{th\_nbti}$ plus $V_{th\_design}$. Here, $V_{th\_design}$ is given by technology and $\Delta V_{th\_nbti}$ can be simplified as Equation~(\ref{eq:cor2}) because $V_{th\_pv}$ is set to 0. In Equation~(\ref{eq:conv2}), since $V_{th\_design}$ is known and $\Delta V_{th\_nbti}$ can be derived without unknown $S_{v}$, the convergent value of $V_{th}$ can be obtained.
+\begin{equation}
+	\centering
+	\Delta V_{th\_nbti} = A \cdot a^n \cdot t^n
+	\label{eq:cor2}
+\end{equation}
+\begin{equation}
+	\centering
+	V_{th} = \Delta V_{th\_nbti} + 0 + V_{th\_design}
+	\label{eq:conv2}
+\end{equation}
+\paragraph{Obtain the value of $S_{v}$ with specific $\Delta V_{th\_pv}$}
+Given a specific value of $\Delta V_{th\_pv}$, our objective is to derive corresponding $S_{v}$ value. Since the convergent $V_{th}$ value is obtained in the last step and $V_{th\_design}$ is known, we can derive the corresponding $\Delta V_{th\_nbti}$ using Equation~(\ref{eq:conv}), such that the corresponding $S_{v}$ can be obtained in Equation~(\ref{eq:cor}). 
+
+%Shortly speaking, given a specific value of $\Delta V_{th\_pv}$, our objective is to derive corresponding $S_{v}$ value. We first assume threshold voltages are convergent over a long-term period; then, since all the coefficients of Equation~(\ref{eq:cor}) are known, the value of $\Delta V_{th\_nbti}$ can be obtained.
+So far, the conversion from a given specific $\Delta V_{th\_pv}$ to corresponding $\Delta V_{th\_nbti}$ has been constructed. Then, $\Delta V_{th\_nbti}$ must be transformed to aging-induced delay shift. In~\cite{wang2007efficient}, the delay shift is linearly proportional to $\Delta V_{th\_nbti}$:
+\begin{equation}
+	\centering
+	\Delta t_{p\_aged} = C \cdot \Delta V_{th\_nbti}
+	\label{eq:vtodelay}
+\end{equation}	
+where $\Delta t_{p\_aged}$ is BTI-induced delay shift, and $C$ is a constant and fitted to 0.5 after SPICE simulation. Further, the Equation~(\ref{eq:vtodelay}) is modified as following Equation~(\ref{eq:vtodelay2}) to account for the conversion from $\Delta V_{th\_pv}$ to intrinsic delay shift. 
+\begin{equation}
+	\centering
+	\Delta t_{p\_intrinsic} = C \cdot \Delta V_{th\_pv}
+	\label{eq:vtodelay2}
+\end{equation}	
+where $\Delta t_{p\_intrinsic}$ is the delay shift caused by $\Delta V_{th\_pv}$. Up to now, a model is built to convert a given specific $\Delta V_{th\_pv}$ to corresponding $\Delta t_{p\_aged}$ and $\Delta t_{p\_intrinsic}$. The model is involved in Section[] and Section[]. 
