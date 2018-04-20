@@ -1,0 +1,31 @@
+\section{LIFETIME ESTIMATION}
+\begin{figure*}[!ht]
+    \centering
+    \subfigure{
+    	\label{fig:sub:alg1}
+        \includegraphics[width=0.9\columnwidth]{algorithm1.png}
+    }
+    \hspace{1.6cm}
+    \subfigure{
+    	\label{fig:sub:alg2}
+        \includegraphics[width=0.8\columnwidth]{algorithm2.png}
+    }
+    \caption{Algorithms used to estimate lifetime of designs}
+    \label{fig:en}
+\end{figure*}
+
+After we obtain a solution from foregoing steps, we have to estimate the lifetime of the entire circuit. The detailed procedures are shown in algorithms in Figure~\ref{fig:sub:alg1} and Figure~\ref{fig:sub:alg2}.
+
+Before Algorithm 1, we first construct a digraph, which is similar to the previous one used in choosing targets (based on MDS). Here, the definition of an arc remains the same; however, vertices represent not only candidates but also mines. Then, we use the same measures to prune the digraph; it denotes that, arcs, which indicate the relationships of weak aging correlation between pairs of paths, will be deleted in the resulting digraph.
+
+Furthermore, the previous assumption introduced in Section~\ref{sec:shortlist} says that the union of critical operational modes of all candidate paths is equivalent to the universe of operational modes. That is, after applying worst-case aging on each candidate path (Line 2 in Algorithm 1), all operational modes are considered during lifetime estimation in our methodology. Here, Line 2 in Algorithm 1, says that a candidate path $i$ is assumed to age in the worst case. Then, in the inner for-loop (Lines 4-8), we iteratively estimate the lifetime of other paths based on prediction from the worst-case aging of $i$. For each path, say $p$ (Line 4), the following steps are applied to estimate its lifetime: (Step 1, Line 6) $p's$ lifetime can be estimated based on a binary search, which will be depicted in Algorithm 2, and (Step 2, Line 7) the estimated lifetime is compared against the smallest one, since the smallest lifetime among all paths determines the circuit lifetime.
+In Algorithm 2, path $p's$ lifetime is estimated based on a binary search. The upper/lower bounds for the binary search are set in Lines 1-2, respectively. In Line 6, M is set as the median value of two bounds; and in Line 10, $p's$ aging rate $R_{p}$ is predicted by the regression equation of $p$ on $i$, where $i$ is assumed to age under M-year worst-case condition and its aging rate value is obtained by the following predictive model, which in presented in \cite{wang2007efficient}:
+\begin{equation}
+	A \cdot \alpha^n \cdot t^n 
+\end{equation}
+where $A$ and $n$ are fitted constants, $\alpha$ denotes the stress duty cycle, and $t$ denotes time (unit is second). $\alpha$ is usually set to 0.5. $A$ and $n$ are fitted as 0.0039 and 0.2, respectively, after SPICE simulation.
+
+Then, in Line 11, $R_{p}$ is used to estimate $p's$ slack $S_{p}$, which is utilized to check whether the setup-time violations will occur on p under the aging rate $R_{p}$ (Line 12). If the value of $S_{p}$ is negative, it denotes that, setup-time violations will occur on p after M years at an aging rate of $R_{p}$ (Line 14). Afterwards, according to result of the above timing check, the upper/lower bound for next iteration will be set in Line 13 or 15. While repeating the above steps (Lines 6-15), both bounds gradually converge. Eventually, the converged value of the upper bound is considered as $p's$ lifetime (Line 17), which will be returned to Algorithm1 as the value of $LT_{p}$ (Line 6 in Algorithm 1).
+
+The aforementioned procedure is repeated for each candidate path. We can derive a lifetime value by considering a specific candidate path. By considering all of the candidate
+paths, all operational modes can be considered and we can find a group of lifetime values, i.e., $V_{tr}$ in Algorithm 1. The smallest value and the largest one within $V_{tr}$ are the resulting lifetime interval found based on this given attack.

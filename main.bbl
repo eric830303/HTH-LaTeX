@@ -464,5 +464,47 @@
     \field{title}{The undetectable and unprovable hardware trojan horse}
     \field{year}{2013}
   \endentry
+
+  \entry{wang2007efficient}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=WW}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Wenping},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Zile},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Shengqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WW+1}
+    \strng{fullhash}{WWWZYSCY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Computer-Aided Design, 2007. ICCAD 2007. IEEE/ACM
+  International Conference on}
+    \field{pages}{735\bibrangedash 740}
+    \field{title}{An efficient method to identify critical gates under circuit
+  aging}
+    \field{year}{2007}
+  \endentry
 \endsortlist
 \endinput
