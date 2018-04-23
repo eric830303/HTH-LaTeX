@@ -1,4 +1,53 @@
+%-------------------------- Algorithm 1 --------------------------------------------------------------------------------------
+\begin{algorithm}[t]
+\fontsize{8}{9.6} \selectfont
+\DontPrintSemicolon
+\KwIn{Digraph $G = \{V, A\}$ \break Vertices Set $V = \{Candidate, Mine\}$ \break Arcs Set $A = \forall a \in A, R_{a}^2 > Threshold_{R^2}$       }
+\KwOut{Lower and Upper Bounds of Circuit Lifetime}
+\Begin{
+$Vector~Vtr$\;
+      \For{$\forall i \in Candidate$}
+      {
+          \For{ $\forall p \in V, p \neq i, \exists a \in A$, $a$ is the arc from $i$ to $p$}{
+          $LT_{p}$ = Estimate $p's$ lifetime based on binary search\;
+          \If{ $LT_{p} < Smallest$}{  $Smallest =  LT_{p}$}
+          }
+        }
+        Put $Smallest$ into $Vtr$ \;
+  }
+  \KwRet{Smallest value in $Vtr$, largest value in $Vtr$}
+\caption{Lifetime Estimation\label{LT_1}}
+\end{algorithm}
+%-------------------------- Algorithm 2 -------------------------------------------------------------------------------------
+\begin{algorithm}[t]
+\fontsize{8}{9.6} \selectfont
+\DontPrintSemicolon
+\KwIn{Modified netlist (after DCC insertion), critical path $p$ }
+\KwOut{Lifetime}
+\Begin{
+Upper Bound $U$\;
+Lower Bound $L$\;
+Median~$M$\;
+	\While{ $U - L < 10^{-3}$}
+	{	$M = \frac{U + L}{2}$ \;
+		//Derive $R_{i}$, i.e., $X_{i}$ in the regression equation\;
+		$R_{i} = 0.0039 \times \left(0.5 \times 86400 \times 365 \times M \right)^{0.2}$\;
+		//Predict $R_{p}$, i.e., $Y_{p}$ in the regression equation\;
+		$R_{p} = $Predict $p's$ aging rate by the regression of $p$ on $i$\;
+		$S_{p} = $Estimate $p's$ slack considering an aging rate of $R_{p}$\;
+		\eIf{ $S_{p} > 0$}{  
+			$L =  M$
+		}{
+			$U =  M$
+		}
+	}
+\KwRet{$U$}
+}
+\caption{Lifetime Estimation\label{LT_2}}
+\end{algorithm}
+
 \section{LIFETIME ESTIMATION}
+\begin{comment}
 \begin{figure*}[!ht]
     \centering
     \subfigure{
@@ -13,8 +62,9 @@
     \caption{Algorithms used to estimate lifetime of designs}
     \label{fig:en}
 \end{figure*}
-
-After we obtain a solution from foregoing steps, we have to estimate the lifetime of the entire circuit. The detailed procedures are shown in algorithms in Figure~\ref{fig:sub:alg1} and Figure~\ref{fig:sub:alg2}.
+\end{comment}
+%-------------------------- Paragraph --------------------------------------------------------------------------------------
+After we obtain a solution from foregoing steps, we have to estimate the lifetime of the entire circuit. The detailed procedures are shown in Algorithm~\ref{LT_1}. 
 
 Before Algorithm 1, we first construct a digraph, which is similar to the previous one used in choosing targets (based on MDS). Here, the definition of an arc remains the same; however, vertices represent not only candidates but also mines. Then, we use the same measures to prune the digraph; it denotes that, arcs, which indicate the relationships of weak aging correlation between pairs of paths, will be deleted in the resulting digraph.
 
