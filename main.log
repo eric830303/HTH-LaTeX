@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  23 APR 2018 19:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  24 APR 2018 00:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,53 +1033,56 @@ Excluding 'comment' comment.) (./framework.tex
 <figures/flow.png, id=11, 518.93875pt x 323.2075pt>
 File: figures/flow.png Graphic file (type png)
  <use figures/flow.png>
-Package pdftex.def Info: figures/flow.png used on input line 5.
+Package pdftex.def Info: figures/flow.png used on input line 6.
 (pdftex.def)             Requested size: 226.79846pt x 141.25497pt.
 
 <figures/pathset.png, id=12, 1212.53pt x 392.46625pt>
 File: figures/pathset.png Graphic file (type png)
 
 <use figures/pathset.png>
-Package pdftex.def Info: figures/pathset.png used on input line 11.
+Package pdftex.def Info: figures/pathset.png used on input line 12.
 (pdftex.def)             Requested size: 226.79846pt x 73.40758pt.
- [2 <./figures/exp.png> <./figures/flow.png> <./figures/pathset.png>] <figures/
-pvaware.png, id=20, 962.59625pt x 1017.8025pt>
+ [2 <./figures/exp.png> <./figures/flow.png> <./figures/pathset.png>] Excluding
+ 'comment' comment.
+<figures/pvaware.png, id=20, 962.59625pt x 1017.8025pt>
 File: figures/pvaware.png Graphic file (type png)
 
 <use figures/pvaware.png>
-Package pdftex.def Info: figures/pvaware.png used on input line 59.
+Package pdftex.def Info: figures/pvaware.png used on input line 74.
 (pdftex.def)             Requested size: 226.79846pt x 239.80484pt.
- [3 <./figures/pvaware.png>]
-<figures/graph.png, id=25, 904.37875pt x 674.52pt>
+ <figures/graph.png, id=21, 904.37875pt x 674.52pt>
 File: figures/graph.png Graphic file (type png)
- <use figures/graph.png>
-Package pdftex.def Info: figures/graph.png used on input line 73.
+
+<use figures/graph.png>
+Package pdftex.def Info: figures/graph.png used on input line 88.
 (pdftex.def)             Requested size: 226.79846pt x 169.1545pt.
+
+Underfull \vbox (badness 1776) has occurred while \output is active []
+
+ [3 <./figures/pvaware.png>]
 Missing character: There is no ï in font ptmr7t!
-
-<figures/SAT.png, id=26, 1347.0325pt x 730.73pt>
+ <figures/SAT.png, id=26, 1347.0325pt x 730.73pt>
 File: figures/SAT.png Graphic file (type png)
- <use figures/SAT.png>
-Package pdftex.def Info: figures/SAT.png used on input line 105.
-(pdftex.def)             Requested size: 226.79846pt x 123.0294pt.
 
-<figures/SAT_grp.png, id=27, 1280.785pt x 671.50874pt>
+<use figures/SAT.png>
+Package pdftex.def Info: figures/SAT.png used on input line 120.
+(pdftex.def)             Requested size: 226.79846pt x 123.0294pt.
+ <figures/SAT_grp.png, id=27, 1280.785pt x 671.50874pt>
 File: figures/SAT_grp.png Graphic file (type png)
 
 <use figures/SAT_grp.png>
-Package pdftex.def Info: figures/SAT_grp.png used on input line 111.
+Package pdftex.def Info: figures/SAT_grp.png used on input line 126.
 (pdftex.def)             Requested size: 226.79846pt x 118.89905pt.
- [4 <./figures/graph.png> <./figures/SAT.png>]
-Underfull \hbox (badness 1509) in paragraph at lines 120--121
+ [4 <./figures/graph.png> <./figures/SAT.png> <./figures/SAT_grp.png>]
+Underfull \hbox (badness 1509) in paragraph at lines 135--136
 []\OT1/ptm/m/n/10 Other paths (paths not in the short-list): On their
  []
 
 ) (./lifetime.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.55556> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
- Excluding 'comment' comment. [5 <./figures/SAT_grp.png>])
-(./correlation.tex) (./experiment.tex
-<figures/benchmarkinfo.png, id=42, 708.6475pt x 235.88126pt>
+ Excluding 'comment' comment. [5]) (./correlation.tex)
+(./experiment.tex <figures/benchmarkinfo.png, id=42, 708.6475pt x 235.88126pt>
 File: figures/benchmarkinfo.png Graphic file (type png)
 
 <use figures/benchmarkinfo.png>
@@ -1132,10 +1135,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20774 strings out of 492995
- 389182 string characters out of 6132703
+ 20775 strings out of 492995
+ 389194 string characters out of 6132705
  677670 words of memory out of 5000000
- 24074 multiletter control sequences out of 15000+600000
+ 24075 multiletter control sequences out of 15000+600000
  570598 words of font info for 97 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,20n,45p,10375b,12110s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1157,7 +1160,7 @@ xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (9 pages, 1290385 bytes).
+Output written on main.pdf (9 pages, 1290391 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream

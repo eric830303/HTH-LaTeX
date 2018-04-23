@@ -1,4 +1,5 @@
-\section{DEFINITION AND DCC INSERTION FLOW}
+%\section{DEFINITION AND DCC INSERTION FLOW}
+\section{FRAMEWORK}
 \label{sec:DEF}
 \begin{figure}
 	\centering
@@ -13,9 +14,24 @@
 	\label{fig:set}
 \end{figure}
 
-Our proposed flow of DCC insertion is shown in Figure~\ref{fig:flow}. First, we read the data (e.g. circuit netlist, timing report, aging prediction parameters) and perform preprocessing. The detail about preprocessing will be described later. Then, a graph is constructed according to the correlation and regression between critical paths. In the graph, a vertex represents a critical path, and an edge between two vertices (i.e., a pair of critical paths) represents the correlation/regression between them. Afterwards, we choose some paths as our targets and transform our problem of DCC insertion based on SAT (Boolean Satisfiability), which can be solved by existing SAT solvers such as miniSat. Finally, we estimate the circuit lifetime after DCC insertion to evaluate the quality of our HTH attack.
+The overall flow of the proposed framework for DCC insertion/deployment is depicted in Figure~\ref{fig:flow}. The proposed framework focuses on the three issues: (1) Overhead minimization: Attacking all critical paths may be infeasible and may increase the used DCC count, which denotes the area overhead of the attack. Thus, the framework must filter/classify critical paths to make the attack successful and to minimize the DCC count. (2) Process variations (PVs):  Because PVs impact the latencies of logic paths, it may degrade the lifetime accuracy of proposed Trojan. To be PV-aware, the above mentioned classification of critical paths considers the effect of PVs, where a model is introduced to consider the correlation of PVs and aging. (3) Workload variation: Because users' workload highly impact the degradation of logic paths, the proposed framework must consider users' countless operational modes (i.e., workload). To be workload-aware, the problem of selecting target paths to be attacked is solved using the algorithms of \textbf{Minimum Domination Set}. Therefore, a graph is constructed according to the correlation and regression between critical paths. Note that, in the graph, a vertex represents a critical path, and an edge between two vertices (i.e., a pair of critical paths) denotes the correlation/regression between them. After target paths are determined, the problem of DCC insertion is transformed to a Boolean satisfiability formulation, which can be solved by existing SAT solvers such as miniSat. Finally, after the locations of DCC insertions are outputted from SAT solver, we estimate the circuit lifetime to evaluate the quality of our HTH attack with the impact of PVs.
+
+The section is organized as follows: [subsection 1] discusses the classification of critical paths, [subsection 2] details the PV-aware method, which considers the correlation of PVs and aging, and [subsection 3] introduces the SAT-based formulation of DCC insertion.
+
+\subsection{Classification of Critical Paths}
+\label{sec:DEF:CP}
+ Given a critical path, the path is classified into three groups: \textit{Shortlist}, \textit{Candidate}, and \textit{Mine}, depending on the lifetime controllability of DCC deployments on the associated clock network. To evaluate the lifetime controllability of DCC deployment, we defined three lifetime intervals: $[0, n - \varepsilon]$, $[n - \varepsilon, n + \varepsilon]$, and $[n + \varepsilon, \infty]$, where $n$ is the expected circuit lifetime under the proposed HTH attack and $\varepsilon$ is mximum tolerable error.
+ 
+\begin{itemize}
+	\item \textit{Candidate}: A critical path is defined as a candidate if there at least exists one DCC deployment, which leads the critical path to fail within $[n - \varepsilon, n + \varepsilon]$.
+	\item \textit{Mine}: A critical path is defined as a candidate if it satisfies the following conditions: ($i$) The path is not a candidate. That is, on the associated clock paths of the critical path, there is no DCC deployment to control the path lifetime within $[n - \varepsilon, n + \varepsilon]$. ($ii$) On the associated clock paths, there at least exists one DCC deployment, which leads the critical path to fail within $[0, n - \varepsilon]$, i.e., it lead the critical path to fail prematurely.
+	\item \textit{Shortlist}:  Critical paths in \textit{shortlist} is the subset of \textit{Candidate}, which are selected as target paths to be attacked. Attacking such paths involves deploying DCCs on their associated clock paths.
+\end{itemize}
+%------- DSN 2018v -------------------------------------------------------------------------------------------------------------------------------
+%Our proposed flow of DCC insertion is shown in Figure~\ref{fig:flow}. First, we read the data (e.g. circuit netlist, timing report, aging prediction parameters) and perform preprocessing. The detail about preprocessing will be described later. Then, a graph is constructed according to the correlation and regression between critical paths. In the graph, a vertex represents a critical path, and an edge between two vertices (i.e., a pair of critical paths) represents the correlation/regression between them. Afterwards, we choose some paths as our targets and transform our problem of DCC insertion based on SAT (Boolean Satisfiability), which can be solved by existing SAT solvers such as miniSat. Finally, we estimate the circuit lifetime after DCC insertion to evaluate the quality of our HTH attack.
 
 %------- Definition -------------------------------------------------------------------------------------------------------------------------------
+\begin{comment}
 \textbf{\uline{Definition}}
 \begin{itemize}
 	\item $n$: Expected circuit lifetime under the proposed HTH attack based on DCC insertion. The unit is year.
@@ -39,7 +55,6 @@ Our proposed flow of DCC insertion is shown in Figure~\ref{fig:flow}. First, we 
 	\item \textit{Posmaturely-failing DCC placement}: A kind of DCC placement which leads the critical path to postmature failure.
 	\item \textit{Illegal DCC placement (insertion)}: At most one DCC is allowed along a clock path from the clock source to a flip-flop. Placing more than one DCC along the same clock path is called illegal DCC placement.
 \end{itemize}
-
 %------- Classification of Critical Paths --------------------------------------------------------------------------------------------------
 \textbf{\uline{Classification of Critical Paths}}
 \begin{itemize}
@@ -50,7 +65,7 @@ Our proposed flow of DCC insertion is shown in Figure~\ref{fig:flow}. First, we 
 \end{itemize}
 
 Figure~\ref{fig:set} illustrates the relationship among those classification of critical paths. First, there is no intersection between candidate and mine. Second, the intersection between candidate and victim is effective victim. Third, shortlist is a subset of candidate; effective victim is a superset of shortlist, and so is victim. Moreover, victim and mine are likely to intersect because some paths in victim may belong to mine, and we have to ensure that these paths will not fail prematurely.
-
+\end{comment}
 %------- PV-Aware Methodology --------------------------------------------------------------------------------------------------
 \subsection{Classification of DCC Placements Considering Process Variations}
 \label{sec:dcc_pv}
