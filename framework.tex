@@ -69,14 +69,16 @@ Given a critical path, the path is classified into three groups: \textit{Shortli
 Figure~\ref{fig:set} illustrates the relationship among those classification of critical paths. First, there is no intersection between candidate and mine. Second, the intersection between candidate and victim is effective victim. Third, shortlist is a subset of candidate; effective victim is a superset of shortlist, and so is victim. Moreover, victim and mine are likely to intersect because some paths in victim may belong to mine, and we have to ensure that these paths will not fail prematurely.
 \end{comment}
 %------- PV-Aware Methodology --------------------------------------------------------------------------------------------------
-\subsection{Classification of Critical Paths Considering the Correlation between PVs and Aging (BTI)}
+\subsection{Classification of Critical Paths Considering the Effect of PVs}
 \label{sec:dcc_pv}
+\begin{comment}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\columnwidth]{pvaware.png}
 	\caption{Classification DCC placements considering process variation}
 	\label{fig:pvaware}
 \end{figure}
+\end{comment}
 As mentioned earlier, given a critical path, it is classified into the three groups, according to the path lifetime distribution within the three intervals. However, the lifetime estimation is impacted by PVs, degrading the lifetime accuracy of the proposed HTH attack. To make the proposed Trojan attack  PV-aware, the lifetime estimation considers the effect of PVs by Monte-Carlo simulation, which tests the PVs tolerability of the critical path, under each possible DCC deployment on the associated clock paths.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 %------- DSN 2018v --------------------------------------------------------------------------------------------------
 \begin{comment}
@@ -117,6 +119,7 @@ The cost of our proposed HTHs is the count of inserted DCCs. In order to minimiz
 
 
 %------- SAT  --------------------------------------------------------------------------------------------------
+\begin{comment}
 \subsection{Generation of SAT Formula}
 \label{sec:SAT}
 \begin{figure}
@@ -131,26 +134,62 @@ The cost of our proposed HTHs is the count of inserted DCCs. In order to minimiz
 	\caption{SAT-formulation and relationship among 3 groups of DCC insertions}
 	\label{fig:sat_grp}
 \end{figure}
-
-
 After the shortlist is determined, the problem is transformed into \textbf{Conjunctive Normal Form (CNF)}. That is, it is formulated as a \textbf{Boolean satisfiability (SAT)} problem. First, as shown in Figure~\ref{fig:sat}, each clock buffer is labeled by two Boolean variables to represent four types of DCCs (none, 20\%, 40\%, 80\%) inserted ahead of it. Next, the proposed formulation is based on the classification of critical paths:
+\end{comment}
+
+\subsection{SAT-based Problem Formulation and Encoding for DCC Deployment}
+\label{sec:SAT}
+\begin{comment}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\columnwidth]{SAT.png}
+	\caption{Introduction of SAT-formulation}
+	\label{fig:sat}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\columnwidth]{SAT_grp.png}
+	\caption{SAT-formulation and relationship among 3 groups of DCC insertions}
+	\label{fig:sat_grp}
+\end{figure}
+\end{comment}
+\begin{figure*}[!ht]
+    \centering
+    \includegraphics[width=1.1\columnwidth]{shortlist.png}
+    \caption{Illustrative example for the proposed framework based on DCC deployment/insertion}
+    \label{fig:shortlist}
+\end{figure*}
+
+After the shortlist (i.e., target paths to be attacked) is determined, the problem of DCC deployment on their associated clock paths is formulated as a \textbf{Boolean satisfiability (SAT)} problem. The key of the framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thus, DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of 3 types of DCCs can be chosen (i.e., 20\%, 40\%, and 80\% DCCs). Including the DCC-free case where no DCC is inserted, there are 4 possibilities of DCC insertion for each clock buffer. Given a clock buffer $p$, the four possibilities of DCC insertion at the input of buffer $p$ can be encoded as follows using two Boolean variables $B_{p,2}$ and $B_{p,1}$:
+
+{\small
+\begin{tabular}{ c c c }
+   & DCC type & $\left\{B_{p,2},B_{p,1}\right\}$ \\
+  (1)\quad & None & \{0,0\} \\
+  (2)\quad & 20\% &  \{0,1\} \\
+  (3)\quad & 40\% &  \{1,0\} \\
+  (4)\quad & 80\% &  \{1,1\} \\
+\end{tabular}}
+
+In order to control the circuit lifetime near the expected circuit lifetime $n$, timing constraints of DCC deployments are involved in the SAT-based problem formulation, depending on the classification of critical paths.
 \begin{enumerate}
-	\item Paths in the shortlist (i.e., targets): On their associated clock paths, formulate all conditions of prematurely-failing DCC placements and postmaturely-failing DCC placements.
-	\item Other paths (paths not in the shortlist): On their associated clock paths, formulate all conditions of prematurely-failing DCC placements.
-	\item All paths: Formulate all conditions of illegal DCC placements.
+	\item Paths in the shortlist (i.e., targets): On their associated clock paths, formulate all DCC deployments which lead the path to fail within $[ 0, n - \varepsilon]$ or within $[ n + \varepsilon, \infty]$. That is, the DCC deployments, which lead the path to fail prematurely and post-maturely, are formulated into CNF clauses, such that the SAT solver does not output the corresponding deployment in the result if the CNF is satisfiable.
+	\item Other paths (paths not in the shortlist): On their associated clock paths, formulate all DCC deployments which lead the path to fail within $[ 0, n - \varepsilon]$. That is, the DCC deployments, which lead the path to fail prematurely, are formulated into CNF clauses, such that the SAT solver does not output the corresponding deployment in the result if the CNF is satisfiable.
 \end{enumerate}
 
-Consider the example in Figure~\ref{fig:sat}: assume that critical path P is in the shortlist. If the insertion of an 80\% DCC ahead of buffer B will lead the path to premature failure, then the following clause will be added into CNF:
+Consider the example in Figure~\ref{fig:shortlist} (a), where the 80\% and 20\% DCCs are inserted at the inputs of buffer 2 and 7, respectively. Assume that the critical path $p$ is in shortlist. If the DCC deployment will lead the path $p$ to fail prematurely (i.e., path fail within $[ 0, n - \varepsilon]$), then the following clause
 \begin{gather*}
 	\mbox{($A_{1} \lor A_{0} \lor \neg B_{1} \lor B_{0} \lor C_{1} \lor C_{0}$) } 
 \end{gather*}
+will be generated and added into CNF, such that the solver will not output the corresponding DCC deployment in the result if the CNF is satisfiable.
 
-Then, if the insertion of a 20\% DCC ahead of buffer C will lead the path to postmature failure, then the following clause will be added into CNF:
+Consider the other example in Figure~\ref{fig:shortlist} (b), where the 80\% and 20\% DCCs are inserted at the inputs of buffer 4 and 5, respectively. Assume again that the critical path $p$ is in shortlist. If the DCC deployment will lead the path $p$ to fail post-maturely (i.e., path fail within $[ n + \varepsilon, \infty]$), then the following clause
 \begin{gather*}
 	\mbox{($A_{1} \lor A_{0} \lor B_{1} \lor B_{0} \lor C_{1} \lor \neg C_{0}$) } 
 \end{gather*}
+will be generated and added into CNF, such that the solver will not output the corresponding DCC deployment in the result if the CNF is satisfiable.
 
-More explicitly, according to the above statements, we must avoid those conditions denoted by the red shape illustrated in Figure~\ref{fig:sat_grp}, and expect to find a feasible solution denoted by the green shape. After the formulation, our proposed problem based on DCC insertion is transformed into a CNF file. The CNF can be fed to a SAT solver and we can find the locations and types of inserted DCCs by decoding the output from the solver.
+For SAT-based formulation, our proposed problem of DCC deployment is transformed into CNF clauses. The CNF clauses are solved by SAT solver such as MiniSat and we can find the locations and types of inserted DCCs by decoding the output from the solver.
 
 
 
