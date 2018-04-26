@@ -2,10 +2,12 @@
 \label{sec:mot}
 \begin{figure*}
 	\centering
-	\includegraphics[width=0.9\columnwidth]{benchmarkinfo.png}
+	\includegraphics[width=0.7\columnwidth]{benchmarkinfo.png}
 	\caption{Circuit information and estimated lifetime without Trojan insertion}
 	\label{fig:benchmark}
 \end{figure*}
+
+\begin{comment}
 \begin{figure*}
 	\includegraphics[width=1.8\columnwidth]{exp1.png}
 	\caption{Lifetime distribution of s38417 instances when it is attacked to fail at 5 year and 3 year}
@@ -21,12 +23,58 @@
 	\caption{Lifetime distribution of leo3mp instances when it is attacked to fail at 5 year and 3 year}
 	\label{fig:exp3}
 \end{figure*}
+\end{comment}
+
+\begin{figure*}[!ht]
+    \centering
+    \subfigure[ n = 3 years ]{
+    	\label{fig:sub:s38417_3y}
+        \includegraphics[width=0.7\columnwidth]{s384173y.png}
+    }
+    \hspace{0.2cm}
+    \subfigure[n = 5 years ]{
+    	\label{fig:sub:s38417_5y}
+        \includegraphics[width=0.7\columnwidth]{s384175y.png}
+    }
+    \caption{Lifetime distribution of Monte-Carlo Instances of $s38417$}
+    \label{fig:exp1}
+\end{figure*}
+\begin{figure*}[!ht]
+    \centering
+    \subfigure[ n = 3 years ]{
+    	\label{fig:sub:des_3y}
+        \includegraphics[width=0.7\columnwidth]{des3y.png}
+    }
+    \hspace{0.2cm}
+    \subfigure[n = 5 years ]{
+    	\label{fig:sub:des_5y}
+        \includegraphics[width=0.7\columnwidth]{des5y.png}
+    }
+    \caption{Lifetime distribution of Monte-Carlo Instances of $des\_perf$}
+    \label{fig:exp2}
+\end{figure*}
+\begin{figure*}[!ht]
+    \centering
+    \subfigure[ n = 4 years ]{
+    	\label{fig:sub:vga_3y}
+        \includegraphics[width=0.7\columnwidth]{3mp4y.png}
+    }
+    \hspace{0.2cm}
+    \subfigure[n = 5 years ]{
+    	\label{fig:sub:3mp_5y}
+        \includegraphics[width=0.7\columnwidth]{3mp5y.png}
+    }
+    \caption{Lifetime distribution of Monte-Carlo Instances of $leo3mp$}
+    \label{fig:exp3}
+\end{figure*}
+
+
 
 In this section, we explain the experimental setting and demonstrate the experimental results of our proposed Trojan attack. The benchmarks in IWLS'05 and ISCAS'89 are used in the experiments. The utilized technology is TSMC 65nm GP standard cell series. The used SAT solver is MiniSAT 2.2. The section is organized as follows: Section~\ref{sec:exp:tc} introduces the experimental setting for clock period. Section~\ref{sec:exp:exp} demonstrates the lifetime distributions of Monte-Carlo instances of attacked designs, Eventually, Section~\ref{sec:exp:det} discuss the detectability of the proposed Trojan attack.  
 
 \subsection{Clock Period Setting}
 \label{sec:exp:tc}
-Figure \ref{fig:benchmark} shows the lifetime intervals of original (i.e., Trojan-free) designs with clock periods which make the designs fail at a specified time (in our experiment, 7 years) under aging. The resulting clock period is both used in Trojan-free and Trojan-included (attacked) designs. In Figure~\ref{fig:benchmark}, lower bounds are exactly 7 years because circuit clock periods (shown in column 4) are specifically set such that the most critical path, whose slack is smallest, fails at 7th year under the worst-case aging condition. The upper bound of each design differs significantly because, in the Trojan-free de- signs, only the most critical path is considered for deter- mined the clock period while workload variations are disregarded.
+Figure \ref{fig:benchmark} shows the lifetime intervals of original (i.e., Trojan-free) designs with clock periods which make the designs fail at a specified time (in our experiment, 7 years) under aging. The resulting clock period is both used in Trojan-free and Trojan-included (attacked) designs. In Figure~\ref{fig:benchmark}, lower bounds are exactly 7 years because circuit clock periods (shown in column 4) are specifically set such that the most critical path, whose slack is smallest, fails at 7th year under the worst-case aging condition. The upper bound of each design differs significantly because, in the Trojan-free designs, only the most critical path is considered for deter- mined the clock period while workload variations are disregarded.
 
 %\subsection{Monte-Carlo Instantiation of the Attacked Designs}
 %\label{sec:exp:mc_ins}
