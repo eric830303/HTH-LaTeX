@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  25 APR 2018 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  25 APR 2018 23:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1060,10 +1060,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.55556> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
  Excluding 'comment' comment.
-[4]) (./correlation.tex
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
- [5 <./figures/shortlist.png>]) (./experiment.tex
+[4] [5 <./figures/shortlist.png>]) (./exp_set_correlation.tex) (./exp_other.tex
 <figures/benchmarkinfo.png, id=41, 708.6475pt x 235.88126pt>
 File: figures/benchmarkinfo.png Graphic file (type png)
 
@@ -1117,10 +1114,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20770 strings out of 492995
- 389011 string characters out of 6132703
+ 20775 strings out of 492995
+ 389096 string characters out of 6132705
  681670 words of memory out of 5000000
- 24068 multiletter control sequences out of 15000+600000
+ 24073 multiletter control sequences out of 15000+600000
  573221 words of font info for 104 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,20n,45p,10375b,12110s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1144,7 +1141,7 @@ dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (9 pages, 1061395 bytes).
+Output written on main.pdf (9 pages, 1062102 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
