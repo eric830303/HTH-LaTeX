@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  26 APR 2018 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.3.7)  26 APR 2018 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -928,6 +928,9 @@ LaTeX Warning: Label `eq:setup' multiply defined.
 
 LaTeX Warning: Label `sec:mot' multiply defined.
 
+
+LaTeX Warning: Label `fig:exp' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1109,52 +1112,52 @@ File: figures/benchmarkinfo.png Graphic file (type png)
 
 <use figures/benchmarkinfo.png>
 Package pdftex.def Info: figures/benchmarkinfo.png used on input line 5.
-(pdftex.def)             Requested size: 176.39923pt x 58.71461pt.
- Excluding 'comment' comment.
+(pdftex.def)             Requested size: 201.60077pt x 67.10448pt.
+
 <figures/s384173y.png, id=42, 481.8pt x 361.35pt>
 File: figures/s384173y.png Graphic file (type png)
  <use figures/s384173y.png>
-Package pdftex.def Info: figures/s384173y.png used on input line 33.
+Package pdftex.def Info: figures/s384173y.png used on input line 16.
 (pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
 
 <figures/s384175y.png, id=43, 481.8pt x 361.35pt>
 File: figures/s384175y.png Graphic file (type png)
  <use figures/s384175y.png>
-Package pdftex.def Info: figures/s384175y.png used on input line 38.
+Package pdftex.def Info: figures/s384175y.png used on input line 21.
 (pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
 
 <figures/des3y.png, id=44, 481.8pt x 361.35pt>
 File: figures/des3y.png Graphic file (type png)
  <use figures/des3y.png>
-Package pdftex.def Info: figures/des3y.png used on input line 47.
+Package pdftex.def Info: figures/des3y.png used on input line 26.
 (pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
 
 <figures/des5y.png, id=45, 481.8pt x 361.35pt>
 File: figures/des5y.png Graphic file (type png)
  <use figures/des5y.png>
-Package pdftex.def Info: figures/des5y.png used on input line 52.
+Package pdftex.def Info: figures/des5y.png used on input line 30.
 (pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
 
 <figures/3mp4y.png, id=46, 481.8pt x 361.35pt>
 File: figures/3mp4y.png Graphic file (type png)
  <use figures/3mp4y.png>
-Package pdftex.def Info: figures/3mp4y.png used on input line 61.
+Package pdftex.def Info: figures/3mp4y.png used on input line 34.
 (pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
 
 <figures/3mp5y.png, id=47, 481.8pt x 361.35pt>
 File: figures/3mp5y.png Graphic file (type png)
  <use figures/3mp5y.png>
-Package pdftex.def Info: figures/3mp5y.png used on input line 66.
+Package pdftex.def Info: figures/3mp5y.png used on input line 39.
 (pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
  [6]
-Overfull \vbox (1.34029pt too high) has occurred while \output is active []
+Underfull \vbox (badness 1490) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./figures/benchmarkinfo.png> <./figures/s384173y.png> <./figures/s384175y.
 png> <./figures/des3y.png> <./figures/des5y.png> <./figures/3mp4y.png> <./figur
-es/3mp5y.png>]) [8]
+es/3mp5y.png>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1166,9 +1169,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[9
-
-] (./main.aux)
+[8] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -1185,10 +1186,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20834 strings out of 492995
- 390183 string characters out of 6132703
+ 20831 strings out of 492995
+ 390153 string characters out of 6132705
  680670 words of memory out of 5000000
- 24129 multiletter control sequences out of 15000+600000
+ 24126 multiletter control sequences out of 15000+600000
  575663 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,20n,45p,10375b,12111s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1213,10 +1214,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on main.pdf (9 pages, 700508 bytes).
+Output written on main.pdf (8 pages, 700824 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
