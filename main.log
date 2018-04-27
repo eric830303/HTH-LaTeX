@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  27 APR 2018 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  27 APR 2018 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1085,7 +1085,7 @@ Excluding 'comment' comment.
 File: figures/graph.png Graphic file (type png)
  <use figures/graph.png>
 Package pdftex.def Info: figures/graph.png used on input line 98.
-(pdftex.def)             Requested size: 201.60077pt x 150.36069pt.
+(pdftex.def)             Requested size: 226.79846pt x 169.1545pt.
 Missing character: There is no ï in font ptmr7t!
 
 [3 <./figures/graph.png>] Excluding 'comment' comment.
@@ -1190,7 +1190,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  20844 strings out of 492995
  390470 string characters out of 6132703
- 681670 words of memory out of 5000000
+ 680670 words of memory out of 5000000
  24139 multiletter control sequences out of 15000+600000
  575663 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1216,7 +1216,7 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on main.pdf (8 pages, 692530 bytes).
+Output written on main.pdf (8 pages, 692557 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream

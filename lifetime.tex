@@ -34,7 +34,7 @@ Median~$M$\;
 		$X_{i} = 0.0039 \times \left(0.5 \times 86400 \times 365 \times M \right)^{0.2}$\;
 		//Predict $p's$ aging rate i.e., $Y_{p}$ by the regression of $p$ on $i$\;
 		$Y_{p} = \alpha_{pi} \cdot$ $X_{i} + \beta_{pi}$\;
-		$S_{p}$ = Estimate $p's$ slack considering an aging rate of $R_{p}$\;
+		$S_{p}$ = Estimate $p's$ slack considering an aging rate of $Y_{p}$\;
 		\eIf{ $S_{p} > 0$}{  
 			$L =  M$
 		}{
@@ -86,7 +86,7 @@ where $ \alpha_{pi}$ and $\beta_{pi}$ are coefficients, and path $i$ is assumed 
 \end{equation}
 where $A$ and $n$ are fitted constants, $\alpha$ denotes the stress duty cycle, and $t$ denotes time (unit is second). $\alpha$ is usually set to 0.5. $A$ and $n$ are fitted as 0.0039 and 0.2, respectively, after SPICE simulation.
 
-Then, in Line 11, $R_{p}$ is used to estimate $p's$ slack $S_{p}$, which is utilized to check whether the setup-time violations will occur on p under the aging rate $Y_{p}$ (Line 12). If the value of $S_{p}$ is negative, it denotes that, setup-time violations will occur on $p$ after M years at an aging rate of $Y_{p}$ (Line 14). Afterwards, according to result of the above timing check, the upper/lower bound for next iteration will be set in Line 13 or 15. While repeating the above steps (Lines 5-17), both bounds gradually converge. Eventually, the converged value of the upper bound is considered as $p's$ lifetime (Line 17), which will be returned to Algorithm 1 as the value of $LT_{p}$ (Line 6 in Algorithm~\ref{LT_1}).
+Then, in Line 11, $Y_{p}$ is used to estimate $p's$ slack $S_{p}$, which is utilized to check whether the setup-time violations will occur on p under the aging rate $Y_{p}$ (Line 12). If the value of $S_{p}$ is negative, it denotes that, setup-time violations will occur on $p$ after M years at an aging rate of $Y_{p}$ (Line 14). Afterwards, according to result of the above timing check, the upper/lower bound for next iteration will be set in Line 13 or 15. While repeating the above steps (Lines 5-17), both bounds gradually converge. Eventually, the converged value of the upper bound is considered as $p's$ lifetime (Line 17), which will be returned to Algorithm 1 as the value of $LT_{p}$ (Line 6 in Algorithm~\ref{LT_1}).
 
 The aforementioned procedures are repeated for each candidate path. We can derive a lifetime value by considering a specific candidate path. By considering all of the candidate
 paths, all operational modes are considered and we can find a group of lifetime values, i.e., $V_{tr}$ in Algorithm~\ref{LT_1}. The smallest value and the largest one within $V_{tr}$ are the resulting lifetime interval found based on this given attack.
