@@ -2,7 +2,7 @@
 \label{sec:mot}
 \begin{figure*}
 	\centering
-	\includegraphics[width=0.8\columnwidth]{benchmarkinfo.png}
+	\includegraphics[width=1\columnwidth]{benchmarkinfo.png}
 	\caption{Circuit information and estimated lifetime without Trojan insertion}
 	\label{fig:benchmark}
 \end{figure*}
@@ -10,30 +10,30 @@
 %%---------TEST--------------
 \begin{figure*}[!ht]
     \centering
-    \subfigure[\textit{s38417} is attacked with $n$ = 3 years]{
+    \subfigure[\textit{s38417} is attacked with $n$ = 3 yr and $\varepsilon = 0.3$ yr]{
     	\label{fig:sub:s38417_3y}
         \includegraphics[width=0.7\columnwidth]{s384173y.png}
     }
     \hspace{0.1cm}
-    \subfigure[\textit{s38417} is attacked with $n$ = 5 years]{
+    \subfigure[\textit{s38417} is attacked with $n$ = 5 yr and $\varepsilon = 0.5$ yr]{
     	\label{fig:sub:s38417_5y}
         \includegraphics[width=0.7\columnwidth]{s384175y.png}
     }
     \hspace{0.1cm}
-    \subfigure[\textit{des\_perf} is attacked with $n$ = 3 years]{
+    \subfigure[\textit{des\_perf} is attacked with $n$ = 3 yr and $\varepsilon = 0.3$ yr]{
     	\label{fig:sub:des_3y}
         \includegraphics[width=0.7\columnwidth]{des3y.png}
     }
-    \subfigure[\textit{des\_perf} is attacked with $n$ = 5 years]{
+    \subfigure[\textit{des\_perf} is attacked with $n$ = 5 yr and $\varepsilon = 0.5$ yr]{
     	\label{fig:sub:des_5y}
         \includegraphics[width=0.7\columnwidth]{des5y.png}
     }
-    \subfigure[\textit{leo3mp} is attacked with $n$ = 3 years]{
+    \subfigure[\textit{leo3mp} is attacked with $n$ = 3 yr and $\varepsilon = 0.3$ yr]{
     	\label{fig:sub:3mp_3y}
         \includegraphics[width=0.7\columnwidth]{3mp4y.png}
     }
     \hspace{0.1cm}
-    \subfigure[\textit{leo3mp} is attacked with $n$ = 5 years]{
+    \subfigure[\textit{leo3mp} is attacked with $n$ = 5 yrs and $\varepsilon = 0.5$ yr]{
     	\label{fig:sub:3mp_5y}
         \includegraphics[width=0.7\columnwidth]{3mp5y.png}
     }
@@ -70,4 +70,4 @@ When it comes to the detectability of the proposed Trojan, side-channel analysis
 Some Trojan defenders can insert probes in the clock network to inspect the variation of clock duty cycle. The detection method is indeed able to prove the existence of the proposed Trojan. However, the method need to be supported by extra I/O pins/ports. Therefore, it is impractical, not only because the pin counts of ICs are limited, but also the area over- head of extra pins is costly.
 
 \section{CONCLUSION}
-We proposed a methodology of hardware Trojan insertion to control the circuit lifetime with the consideration of aging behavior, correlation between pairs of critical paths and process variations. The influence of Trojan heavily reduce the lifetime of circuit instances. Even though the accuracy is impacted by PV, the lifetime of instances is still likely to fail within the desired lifetime interval $[0.9 \times n, 1.1 \times n]$. Also, the DCC count is less than 0.2\% of total gate count, implying limited area and power overhead. Therefore, the proposed Trojan is difficult to be detected.
+We proposed a methodology of hardware Trojan insertion to control the circuit lifetime with the consideration of aging behavior, correlation between pairs of critical paths and process variations. The influence of Trojan heavily reduce the lifetime of circuit instances. Even though the accuracy is impacted by PVs, the lifetime of instances is still likely to fail within the desired lifetime interval $[n - \varepsilon, n + \varepsilon]$. Also, the DCC count is less than 0.2\% of total gate count, implying limited area and power overhead. Therefore, the proposed Trojan is difficult to be detected.

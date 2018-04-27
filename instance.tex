@@ -21,13 +21,13 @@ In this section, we discuss the influence of process variation (PV) on BTI. Othe
 A model in~\cite{gomez2016early} is proposed to estimate the correlation between fresh V\textsubscript{th} offset and BTI effects:
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6} \selectfont
+	\fontsize{9}{9} \selectfont
 	\Delta V_{th\_nbti} = (1 - S_{v} \cdot \Delta V_{th\_pv})  \cdot A \cdot a^n \cdot t^n
 	\label{eq:cor}
 \end{equation}
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6} \selectfont
+	\fontsize{9}{9} \selectfont
 	V_{th} = \Delta V_{th\_nbti} + \Delta V_{th\_pv} + V_{th\_design}
 	\label{eq:conv}
 \end{equation}
@@ -40,13 +40,13 @@ We assume threshold voltages of all transistors will be convergent after a long 
 Since $V_{th}$ is fixed regardless of various $\Delta V_{th\_pv}$, we set $\Delta V_{th\_pv}$ to 0 in Equation~(\ref{eq:conv}) to derive the convergent value of $V_{th}$. This way, Equation~(\ref{eq:conv}) can be simplified as Equation~(\ref{eq:conv2}), where the convergent value of $V_{th}$ equals $\Delta V_{th\_nbti}$ plus $V_{th\_design}$. Here, $V_{th\_design}$ is given by technology and $\Delta V_{th\_nbti}$ can be simplified as Equation~(\ref{eq:cor2}) because $V_{th\_pv}$ is set to 0. In Equation~(\ref{eq:conv2}), since $V_{th\_design}$ is known and $\Delta V_{th\_nbti}$ can be derived without unknown $S_{v}$, the convergent value of $V_{th}$ can be obtained.
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6} \selectfont
+	\fontsize{9}{9} \selectfont
 	\Delta V_{th\_nbti} = A \cdot a^n \cdot t^n
 	\label{eq:cor2}
 \end{equation}
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6} \selectfont
+	\fontsize{9}{9} \selectfont
 	V_{th} = \Delta V_{th\_nbti} + 0 + V_{th\_design}
 	\label{eq:conv2}
 \end{equation}
@@ -57,14 +57,14 @@ Given a specific value of $\Delta V_{th\_pv}$, our objective is to derive corres
 So far, the conversion from a given specific $\Delta V_{th\_pv}$ to corresponding $\Delta V_{th\_nbti}$ has been constructed. Then, $\Delta V_{th\_nbti}$ must be transformed to aging-induced delay shift. In~\cite{wang2007efficient}, the delay shift is linearly proportional to $\Delta V_{th\_nbti}$:
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6} \selectfont
+	\fontsize{9}{9} \selectfont
 	\Delta t_{p\_aged} = C \cdot \Delta V_{th\_nbti}
 	\label{eq:vtodelay}
 \end{equation}	
 where $\Delta t_{p\_aged}$ is BTI-induced delay shift, and $C$ is a constant and fitted to 0.5 after SPICE simulation. Further, the Equation~(\ref{eq:vtodelay}) is modified as following Equation~(\ref{eq:vtodelay2}) to account for the conversion from $\Delta V_{th\_pv}$ to intrinsic delay shift. 
 \begin{equation}
 	\centering
-	\fontsize{9}{9.6} \selectfont
+	\fontsize{9}{9} \selectfont
 	\Delta t_{p\_intrinsic} = C \cdot \Delta V_{th\_pv}
 	\label{eq:vtodelay2}
 \end{equation}	

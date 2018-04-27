@@ -75,12 +75,12 @@ In this section, we propose two algorithms to estimate the lifetime of design ci
 It is worth reminding that the previous assumption, introduced in Section~\ref{sec:shortlist}, says that the union of critical operational modes of all candidate paths is equivalent to the universe of operational modes. That is, after applying worst-case aging on each candidate path (Line 3 in Algorithm~\ref{LT_1}), all operational modes are considered, during the lifetime estimation in our methodology. Here, Line 2 in Algorithm~\ref{LT_1}, says that a candidate path $i$ is assumed to age in the worst case. Then, in the inner for-loop (Lines 4-8), we iteratively estimate the lifetime of other paths based on prediction from the worst-case aging of $i$. For each path, say $p$ (Line 4), the following steps are applied to estimate $p's$ lifetime: ($i$, Line 6) $p's$ lifetime can be estimated based on a binary search in Algorithm~\ref{LT_2} ($ii$, Line 7) the estimated lifetime is compared against the smallest one, since the smallest lifetime among all paths determines the circuit lifetime.
 In Algorithm~\ref{LT_2}, path $p's$ lifetime is estimated based on a binary search. The upper/lower bounds for the binary search are set in Lines 1-2, respectively. In Line 6, M is set as the median value of two bounds; and in Line 10, $p's$ aging rate $Y_{p}$ is predicted by the regression equation of $p$ on $i$, 
 \begin{equation*}
-	\fontsize{8}{9.6} \selectfont
+	\fontsize{8}{8} \selectfont
 	Y_{p} = \alpha_{pi} \cdot X_{i} + \beta_{pi}
 \end{equation*}
 where $ \alpha_{pi}$ and $\beta_{pi}$ are coefficients, and path $i$ is assumed to age under M-year worst-case condition and its aging rate $X_{i}$ is derived by the following predictive model, which in presented in \cite{wang2007efficient}:
 \begin{equation}
-	\fontsize{8}{9.6} \selectfont
+	\fontsize{8}{8} \selectfont
 	A \cdot \alpha^n \cdot t^n 
 	\label{eq:worst}
 \end{equation}
