@@ -16,7 +16,7 @@ $Vector~Vtr$\;
         Put $Smallest$ into $Vtr$ \;
   }
   \KwRet{Smallest value in $Vtr$, largest value in $Vtr$}
-\caption{Lifetime Estimation\label{LT_1}}
+\caption{Lifetime Interval Estimation of Designs\label{LT_1}}
 \end{algorithm}
 %-------------------------- Algorithm~\ref{LT_2} -------------------------------------------------------------------------------------
 \begin{algorithm}[t]
@@ -31,7 +31,7 @@ Median~$M$\;
 	\While{ $U - L < 10^{-3}$}
 	{	$M = \frac{U + L}{2}$ \;
 		//Derive aging rate of path $i$ i.e., $X_{i}$. Path $i$ is assume undergo worst-case aging \;
-		$X_{i} = 0.0039 \times \left(0.5 \times 86400 \times 365 \times M \right)^{0.2}$\;
+		$X_{i} = A\times \alpha^{n} \times  t^{n}$\;
 		//Predict $p's$ aging rate i.e., $Y_{p}$ by the regression of $p$ on $i$\;
 		$Y_{p} = \alpha_{pi} \cdot$ $X_{i} + \beta_{pi}$\;
 		$S_{p}$ = Estimate $p's$ slack considering an aging rate of $Y_{p}$\;
@@ -43,7 +43,7 @@ Median~$M$\;
 	}
 \KwRet{$U$}
 }
-\caption{Lifetime Estimation\label{LT_2}}
+\caption{Path Lifetime Estimation based on Binary Search\label{LT_2}}
 \end{algorithm}
 
 %-------------------------- LT -------------------------------------------------------------------------------------

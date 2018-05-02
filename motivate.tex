@@ -45,4 +45,4 @@ where $C_{i}$ is the clock latency from clock source to $FF_{i}$, $C_{j}$ is the
 	Slack = (C_{j} + T_{c}) - (C_{i}  + T_{cq} + D_{ij} + T_{su}) > 0 
 	\fontsize{8}{9} \selectfont
 \end{equation}
-which indicates the timing slack must be greater than zero; otherwise, the design fail to work normally. Suppose that, the attacker inserts a 20\% DCC and an 80\% DCC at the inputs of buffer 6 and buffer 3, respectively. Over a period, $C_{i}$ will gain greater than $C_{j}$ does. This way, the timing slack likely decreases to a negative value, such that setup-time violation occur on this critical path, causing the failure of the design circuit.
+which indicates the timing slack must be greater than zero; otherwise, the design fail to work normally. Suppose that, the attacker inserts a 20\% DCC and an 80\% DCC at the inputs of buffer 6 and buffer 3, respectively. Over a period, $C_{i}$ will gain greater than $C_{j}$ does. This way, the timing slack likely decreases to a negative value, such that setup-time violation occurs on this critical path, causing the failure of the designs.
