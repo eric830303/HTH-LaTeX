@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  27 APR 2018 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  2 MAY 2018 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1008,22 +1008,25 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
 
-(./abstract.tex) (./introduction.tex) (./related.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+(./abstract.tex) (./introduction.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./motivate.tex
-Excluding 'comment' comment.
-<figures/exp.png, id=10, 994.71625pt x 382.42876pt>
+]
+Underfull \vbox (badness 4543) has occurred while \output is active []
+
+)
+(./motivate.tex Excluding 'comment' comment.
+<figures/exp.png, id=13, 994.71625pt x 382.42876pt>
 File: figures/exp.png Graphic file (type png)
  <use figures/exp.png>
 Package pdftex.def Info: figures/exp.png used on input line 19.
@@ -1068,94 +1071,83 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
 (Font)              size <5> substituted on input line 41.
 
-) (./framework.tex <figures/flow.png, id=11, 518.93875pt x 323.2075pt>
+) (./framework.tex <figures/flow.png, id=14, 518.93875pt x 323.2075pt>
 File: figures/flow.png Graphic file (type png)
 
 <use figures/flow.png>
 Package pdftex.def Info: figures/flow.png used on input line 6.
 (pdftex.def)             Requested size: 226.79846pt x 141.25497pt.
- Excluding 'comment' comment. [2 <./figures/exp.png> <./figures/flow.png>]
+ [2 <./figures/exp.png>] Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
- Excluding 'comment' comment. Excluding 'comment' comment.
-Excluding 'comment' comment.
-<figures/graph.png, id=23, 904.37875pt x 674.52pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+
+<figures/graph.png, id=24, 904.37875pt x 674.52pt>
 File: figures/graph.png Graphic file (type png)
  <use figures/graph.png>
-Package pdftex.def Info: figures/graph.png used on input line 98.
+Package pdftex.def Info: figures/graph.png used on input line 40.
 (pdftex.def)             Requested size: 226.79846pt x 169.1545pt.
 Missing character: There is no ï in font ptmr7t!
 
-[3 <./figures/graph.png>] Excluding 'comment' comment.
-Excluding 'comment' comment. Excluding 'comment' comment.
-<figures/upper.png, id=30, 1023.825pt x 277.035pt>
+[3 <./figures/flow.png> <./figures/graph.png>] Excluding 'comment' comment.
+<figures/upper.png, id=29, 1023.825pt x 277.035pt>
 File: figures/upper.png Graphic file (type png)
  <use figures/upper.png>
-Package pdftex.def Info: figures/upper.png used on input line 176.
+Package pdftex.def Info: figures/upper.png used on input line 92.
 (pdftex.def)             Requested size: 226.79846pt x 61.36638pt.
-
-<figures/lower.png, id=31, 1030.85126pt x 232.87pt>
-File: figures/lower.png Graphic file (type png)
- <use figures/lower.png>
-Package pdftex.def Info: figures/lower.png used on input line 181.
-(pdftex.def)             Requested size: 231.83954pt x 52.37216pt.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
-)
-(./lifetime.tex
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+
+Excluding 'comment' comment.) (./lifetime.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.55556> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
- Excluding 'comment' comment. [4]) (./instance.tex [5 <./figures/upper.png> <./
-figures/lower.png>]) (./exp_other.tex
-<figures/benchmarkinfo.png, id=42, 586.19pt x 212.795pt>
+ [4] Excluding 'comment' comment.) (./instance.tex [5 <./figures/upper.png>] Ex
+cluding 'comment' comment.)
+(./exp_other.tex <figures/benchmarkinfo.png, id=41, 586.19pt x 212.795pt>
 File: figures/benchmarkinfo.png Graphic file (type png)
 
 <use figures/benchmarkinfo.png>
 Package pdftex.def Info: figures/benchmarkinfo.png used on input line 5.
 (pdftex.def)             Requested size: 252.0pt x 91.47733pt.
 
-<figures/s384173y.png, id=43, 481.8pt x 361.35pt>
+<figures/s384173y.png, id=42, 722.7pt x 361.35pt>
 File: figures/s384173y.png Graphic file (type png)
  <use figures/s384173y.png>
 Package pdftex.def Info: figures/s384173y.png used on input line 16.
-(pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
+(pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
 
-<figures/s384175y.png, id=44, 481.8pt x 361.35pt>
+<figures/s384175y.png, id=43, 722.7pt x 361.35pt>
 File: figures/s384175y.png Graphic file (type png)
  <use figures/s384175y.png>
 Package pdftex.def Info: figures/s384175y.png used on input line 21.
-(pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
+(pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
 
-<figures/des3y.png, id=45, 481.8pt x 361.35pt>
+<figures/des3y.png, id=44, 722.7pt x 361.35pt>
 File: figures/des3y.png Graphic file (type png)
  <use figures/des3y.png>
 Package pdftex.def Info: figures/des3y.png used on input line 26.
-(pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
+(pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
 
-<figures/des5y.png, id=46, 481.8pt x 361.35pt>
+<figures/des5y.png, id=45, 722.7pt x 361.35pt>
 File: figures/des5y.png Graphic file (type png)
  <use figures/des5y.png>
 Package pdftex.def Info: figures/des5y.png used on input line 30.
-(pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
+(pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
 
-<figures/3mp4y.png, id=47, 481.8pt x 361.35pt>
+<figures/3mp4y.png, id=46, 722.7pt x 361.35pt>
 File: figures/3mp4y.png Graphic file (type png)
  <use figures/3mp4y.png>
 Package pdftex.def Info: figures/3mp4y.png used on input line 34.
-(pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
+(pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
 
-<figures/3mp5y.png, id=48, 481.8pt x 361.35pt>
+<figures/3mp5y.png, id=47, 722.7pt x 361.35pt>
 File: figures/3mp5y.png Graphic file (type png)
  <use figures/3mp5y.png>
 Package pdftex.def Info: figures/3mp5y.png used on input line 39.
-(pdftex.def)             Requested size: 176.39923pt x 132.2969pt.
+(pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
  [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1286) has occurred while \output is active []
 
  [7 <./figures/benchmarkinfo.png> <./figures/s384173y.png> <./figures/s384175y.
 png> <./figures/des3y.png> <./figures/des5y.png> <./figures/3mp4y.png> <./figur
@@ -1188,10 +1180,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20844 strings out of 492995
- 390470 string characters out of 6132703
- 680670 words of memory out of 5000000
- 24139 multiletter control sequences out of 15000+600000
+ 20843 strings out of 492995
+ 390858 string characters out of 6132703
+ 677670 words of memory out of 5000000
+ 24141 multiletter control sequences out of 15000+600000
  575663 words of font info for 114 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  45i,20n,45p,10375b,12111s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1216,10 +1208,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on main.pdf (8 pages, 692557 bytes).
+Output written on main.pdf (8 pages, 682208 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

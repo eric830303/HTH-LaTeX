@@ -205,6 +205,254 @@
     \field{year}{2014}
   \endentry
 
+  \entry{schroder2003negative}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SDK}{%
+         family={Schroder},
+         familyi={S\bibinitperiod},
+         given={Dieter\bibnamedelima K},
+         giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=BJA}{%
+         family={Babcock},
+         familyi={B\bibinitperiod},
+         given={Jeff\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {AIP}%
+    }
+    \strng{namehash}{SDKBJA1}
+    \strng{fullhash}{SDKBJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 18}
+    \field{title}{Negative bias temperature instability: Road to cross in deep
+  submicron silicon semiconductor manufacturing}
+    \field{volume}{94}
+    \field{journaltitle}{Journal of applied Physics}
+    \field{year}{2003}
+  \endentry
+
+  \entry{zafar2006negative}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=ZS}{%
+         family={Zafar},
+         familyi={Z\bibinitperiod},
+         given={Sufi},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{ZS1}
+    \strng{fullhash}{ZS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Integrated Reliability Workshop Final Report, 2006 IEEE
+  International}
+    \field{pages}{217\bibrangedash 217}
+    \field{title}{The Negative Bias Temperature Instability in MOS Devices}
+    \field{year}{2006}
+  \endentry
+
+  \entry{chakravarthi2004comprehensive}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CS}{%
+         family={Chakravarthi},
+         familyi={C\bibinitperiod},
+         given={Srini},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Krishnan},
+         familyi={K\bibinitperiod},
+         given={Anand},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Reddy},
+         familyi={R\bibinitperiod},
+         given={Vijay},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Machala},
+         familyi={M\bibinitperiod},
+         given={CF},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Krishnan},
+         familyi={K\bibinitperiod},
+         given={Srikanth},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CS+1}
+    \strng{fullhash}{CSKARVMCKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Reliability Physics Symposium Proceedings, 2004. 42nd
+  Annual. 2004 IEEE International}
+    \field{pages}{273\bibrangedash 282}
+    \field{title}{A comprehensive framework for predictive modeling of negative
+  bias temperature instability}
+    \field{year}{2004}
+  \endentry
+
+  \entry{kimizuka1999impact}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=KN}{%
+         family={Kimizuka},
+         familyi={K\bibinitperiod},
+         given={Naohiko},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=YT}{%
+         family={Yamamoto},
+         familyi={Y\bibinitperiod},
+         given={Toyoji},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Mogami},
+         familyi={M\bibinitperiod},
+         given={Tohru},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=YK}{%
+         family={Yamaguchi},
+         familyi={Y\bibinitperiod},
+         given={Ken},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=IK}{%
+         family={Imai},
+         familyi={I\bibinitperiod},
+         given={Kazuhiro},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Horiuchi},
+         familyi={H\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{KN+2}
+    \strng{fullhash}{KNYTMTYKIKHT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{VLSI Technology, 1999. Digest of Technical Papers. 1999
+  Symposium on}
+    \field{pages}{73\bibrangedash 74}
+    \field{title}{The impact of bias temperature instability for
+  direct-tunneling ultra-thin gate oxide on MOSFET scaling}
+    \field{year}{1999}
+  \endentry
+
+  \entry{kumar2006analytical}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=KSV}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Sanjay\bibnamedelima V},
+         giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=KCH}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Chris\bibnamedelima H},
+         giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SSS}{%
+         family={Sapatnekar},
+         familyi={S\bibinitperiod},
+         given={Sachin\bibnamedelima S},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{KSVKCHSSS1}
+    \strng{fullhash}{KSVKCHSSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2006 IEEE/ACM international conference
+  on Computer-aided design}
+    \field{pages}{493\bibrangedash 496}
+    \field{title}{An analytical model for negative bias temperature
+  instability}
+    \field{year}{2006}
+  \endentry
+
+  \entry{wang2010impact}{article}{}
+    \name{author}{6}{}{%
+      {{hash=WW}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Wenping},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Shengqi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bhardwaj},
+         familyi={B\bibinitperiod},
+         given={Sarvesh},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={Vrudhula},
+         familyi={V\bibinitperiod},
+         given={Sarma},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WW+1}
+    \strng{fullhash}{WWYSBSVSLFCY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{173\bibrangedash 183}
+    \field{title}{The impact of NBTI effect on combinational circuit: modeling,
+  simulation, and analysis}
+    \field{volume}{18}
+    \field{journaltitle}{IEEE Transactions on Very Large Scale Integration
+  (VLSI) Systems}
+    \field{year}{2010}
+  \endentry
+
   \entry{shiyanovskii2010process}{inproceedings}{}
     \name{author}{6}{}{%
       {{hash=SY}{%
@@ -463,6 +711,41 @@
     \field{pages}{144}
     \field{title}{The undetectable and unprovable hardware trojan horse}
     \field{year}{2013}
+  \endentry
+
+  \entry{wu2018maui}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WKC}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Kai-Chiang},
+         giveni={K\bibinitperiod-C\bibinitperiod},
+      }}%
+      {{hash=TTH}{%
+         family={Tseng},
+         familyi={T\bibinitperiod},
+         given={Tien-Hung},
+         giveni={T\bibinitperiod-H\bibinitperiod},
+      }}%
+      {{hash=LSC}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Shou-Chun},
+         giveni={S\bibinitperiod-C\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WKCTTHLSC1}
+    \strng{fullhash}{WKCTTHLSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Design, Automation \& Test in Europe Conference \&
+  Exhibition (DATE), 2018}
+    \field{pages}{527\bibrangedash 532}
+    \field{title}{MAUI: Making aging useful, intentionally}
+    \field{year}{2018}
   \endentry
 
   \entry{ore1962theory}{book}{}
