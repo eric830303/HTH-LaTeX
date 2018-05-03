@@ -1,5 +1,5 @@
  
-\documentclass[10pt, conference]{IEEEtran}
+\documentclass[9pt, conference]{IEEEtran}
 
 
 \usepackage{graphicx}
@@ -24,7 +24,14 @@
 \usepackage{comment}
 \usepackage[normalem]{ulem}
 \usepackage{algorithmic}
+\usepackage{indentfirst}
 \usepackage{algorithm2e}
+\usepackage{amsthm}
+\newtheorem*{mydef}{Definition:}
+\newtheorem*{myasm}{Assumption:}
+%\usepackage[ bottom=0.8in, left=0.65in, right=0.65in]{geometry}
+%\usepackage[ bottom=0.9in]{geometry}
+%\usepackage[ left=0.8in, right=0.8in]{geometry}
 % graphics path
 \graphicspath{{figures/}}
 % figure name bold
@@ -80,7 +87,7 @@
 
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
-\fontsize{9}{11}\selectfont
+
 \input abstract
 \input introduction
 %\input related

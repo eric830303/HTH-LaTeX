@@ -1,6 +1,6 @@
-%\section{DEFINITION AND DCC INSERTION FLOW}
-\section{FRAMEWORK}
-\label{sec:DEF}
+
+\section{PROPOSED FRAMEWORK}
+\label{sec:frame}
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\columnwidth]{flow.png}
@@ -22,9 +22,9 @@ The overall flow of the proposed framework for DCC insertion/deployment is depic
 \end{enumerate}
 
 
-The section is organized as follows: Section~\ref{sec:DEF:CP} discusses the classification of critical paths, Section~\ref{sec:shortlist} details the workload-aware methodology to select target paths to be attacked, and Section~\ref{sec:SAT} introduces the SAT-based formulation of DCC insertion/deployment.
+The section is organized as follows: Section~\ref{sec:frame:cp} discusses the PV-aware methodology of classifying critical path, considering the correlation between PVs and BTI, which is introduced in Section~\ref{sec:frame:cor}. Section~\ref{sec:frame:workload} details the workload-aware methodology of selecting target paths to be attacked and Section~\ref{sec:frame:sat} introduces the SAT-based formulation of DCC insertion/deployment.
 \subsection{Classification of Critical Paths}
-\label{sec:DEF:CP}
+\label{sec:frame:cp}
 Given a critical path, the path is classified into three groups: \textit{Shortlist}, \textit{Candidate}, and \textit{Mine}, depending on the lifetime\footnote{The lifetime of a critical path is defined as when the timing violation occurs on the path, in the presence of aging.} distribution\footnote{Given a critical path, a DCC deployment on the associated clock paths results in an individual lifetime value of the critical path. Thus, numerous DCC deployments on the associated clock paths forms the lifetime distribution of the path.} of the critical path, under all possible DCC deployments on the associated clock network. The lifetime distribution of the path is further analyzed with three lifetime intervals, which are defined as follows: $[0, n - \varepsilon]$, $[n - \varepsilon, n + \varepsilon]$, and $[n + \varepsilon, \infty]$, where $n$ is the expected circuit lifetime under the proposed HTH attack and $\varepsilon$ is mximum tolerable error. The lifetime distributions of the path in the three intervals determine the classification of the critical path. 
 \begin{itemize}
 	\item \textit{Candidate}: A critical path is defined as a candidate if there at least exists one DCC deployment, which leads the critical path to fail within $[n - \varepsilon, n + \varepsilon]$\footnote{Because of the effects of PVs and workload variations, it is impossible to precisely control the circuit lifetime at the expected lifetime $n$, thus, the Trojan attack, controlling the circuit lifetime within $[n - \varepsilon, n + \varepsilon]$ is accepted/desired. Therefore, the lifetime interval $[n - \varepsilon, n + \varepsilon]$ is defined as \textit{desired lifetime interval}.}.
@@ -32,37 +32,87 @@ Given a critical path, the path is classified into three groups: \textit{Shortli
 	\item \textit{Shortlist}:  Critical paths in \textit{shortlist} is the subset of \textit{Candidate}, which are selected as target paths to be attacked. Attacking such paths involves deploying DCCs on their associated clock paths.
 \end{itemize}
 
-To be PV-aware, while classifying critical paths, we conduct Monte-Carlo simulation on the delay of logic path in a statistical manner. The simulation is performed by imposing extra V\textsubscript{th} offset (i.e., $\Delta V_{th\_pv}$ ) on each transistor of logic path. Then, we check the setup-time constraint using Equation~(\ref{eq:setup}), considering the correlation of PVs and BTI, which is introduced in the next subsection. 
+To make the classification PV-aware, we conduct Monte-Carlo simulation on the delays of logic paths from statistical perspective. The simulation is performed by imposing extra V\textsubscript{th} offset (i.e., $\Delta V_{th\_pv}$) on each transistor of logic paths. Then, we check the setup-time constraint using Equation~(\ref{eq:setup}), considering the correlation of PVs and BTI, which is introduced in the next subsection. 
 
 \subsection{Path Delay Estimation considering the Correlation between PVs and BTI}
-In this subsection, we discuss the correlation between PVs and BTI. The correlation is a long-term phenomenon that bridge the V\textsubscript{th} differences among the transistors over a period. Further, a positive/negative V\textsubscript{th} offset leads to a higher/lower fresh V\textsubscript{th}, causing a lower/higher aging speed. Therefore, the gap between high and low V\textsubscript{th} will be gradually converged, letting threshold voltages of transistors, whose fresh ones are different, reach a convergent value. We use a model proposed in~\cite{gomez2016early} to estimate the correlation between fresh V\textsubscript{th} offset and BTI effects:
+\label{sec:frame:cor}
+The correlation is a long-term phenomenon that bridge the V\textsubscript{th} differences among the transistors over a period. Further, a positive/negative V\textsubscript{th} offset leads to a higher/lower fresh V\textsubscript{th}, causing a lower/higher aging speed. Therefore, the gap between high and low V\textsubscript{th} will be gradually converged, letting threshold voltages of transistors, whose fresh ones are different, reach a convergent value. We use a model proposed in~\cite{gomez2016early} to estimate the correlation between fresh V\textsubscript{th} offset (caused by PVs) and BTI effects:
 \begin{equation}
 	\centering
 	\fontsize{9}{9} \selectfont
 	\Delta V_{th\_bti} = (1 - S_{v} \cdot \Delta V_{th\_pv})  \cdot A \cdot \alpha^n \cdot t^n
 	\label{eq:cor}
 \end{equation}
-where $\Delta V_{th\_pv}$ is the fresh V\textsubscript{th} offset due to PV. $\Delta V_{th\_bti}$ is the BTI-induced V\textsubscript{th} shift, $\alpha$ is the stress duty cycle, $A$ is $3.9 \times 10^{-3} V \cdot s^{-1/_5}$, $n$ is time exponential constant, 0.2 for used technology, and $S_{v}$ is a constant which can be extracted by fitting HSPICE simulation results in 45nm TSMC technology. 
-
+where $\Delta V_{th\_pv}$ is the fresh V\textsubscript{th} offset caused by PVs. $\Delta V_{th\_bti}$ is the BTI-induced V\textsubscript{th} shift, $\alpha$ is the stress duty cycle, $A$ is $3.9 \times 10^{-3} V \cdot s^{-1/_5}$, $n$ is time exponential constant, 0.2 for used technology, and $S_{v}$ is a constant which can be extracted by fitting HSPICE simulation results in 45nm TSMC technology. So far, given a specific $\Delta V_{th\_pv}$ imposed on the V\textsubscript{th} of a transistor, we use Equation~(\ref{eq:cor}) to derive the corresponding $\Delta V_{th\_bti}$, which can be further transformed to BTI-induced delay shift, using the model proposed in~\cite{wang2007efficient}.% the delay shift is linearly proportional to $\Delta V_{th\_bti}$:
+\begin{equation}
+	\centering
+	\fontsize{9}{9} \selectfont
+	\Delta t_{p\_aged} = C \cdot \Delta V_{th\_bti}
+	\label{eq:vtodelay}
+\end{equation}	
+where $\Delta t_{p\_aged}$ is BTI-induced shift of propagation delay, and $C$ is a constant and is fitted to 0.5 after SPICE simulation. Further, the Equation~(\ref{eq:vtodelay}) is modified as following Equation~(\ref{eq:vtodelay2}) to account for the conversion from $\Delta V_{th\_pv}$ to intrinsic delay shift. 
+\begin{equation}
+	\centering
+	\fontsize{9}{9} \selectfont
+	\Delta t_{p\_intrinsic} = C \cdot \Delta V_{th\_pv}
+	\label{eq:vtodelay2}
+\end{equation}	
+where $\Delta t_{p\_intrinsic}$ is the propagation delay shift caused by $\Delta V_{th\_pv}$. Up to now, a model is built to convert a given specific $\Delta V_{th\_pv}$ to corresponding $\Delta t_{p\_aged}$ and $\Delta t_{p\_intrinsic}$. The model is not only used in the classification of critical paths, but also used in Section~\ref{sec:lt_estimation} while estimating the lifetime intervals of Monte-Carlo instances of attacked designs. 
 %------- Shortlist selection --------------------------------------------------------------------------------------------------
-\subsection{Selection of Target Paths (Shortlist) to be attacked}
-\label{sec:shortlist}
+\subsection{Selection of Target Paths (Shortlist) to be attacked considering Workload Variations}
+\label{sec:frame:workload}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\columnwidth]{graph.png}
+	\includegraphics[width=0.8\columnwidth]{graph.png}
 	\caption{Example of graph used in choosing targets}
 	\label{fig:graph}
 \end{figure}
 
-%If an attacked critical path always ages as estimated (i.e., under worst-case aging), a successful attack can be obtained just by inserting DCCs on its associated clock paths. However, uncertainty of user-dependent operational modes (e.g., watching video, playing games) can influence/vary the aging behavior. Therefore, we must ensure that the attack will succeed under any operational mode. We make the following assumption, which is also used in Section~\ref{sec:lt_estimation} to estimate the lifetime of attacked designs:
 The uncertainty of user-dependent operational modes (e.g., watching video, playing games) can influence/vary the aging behavior of logic paths. Therefore, we must ensure that the attack will succeed under any operational mode. We make the following assumption, which is also used in Section~\ref{sec:lt_estimation} to estimate the lifetime of attacked designs:
 
-\textit{"Every operational mode causes at least one candidate path to undergo worst-case aging."}
+\noindent \textbf{\uline{Assumption: Every operational mode causes at least one candidate path to undergo worst-case aging.}}
 
-In other words, no matter how users operate the design, at least one candidate path in the design undergoes worst-case aging. Moreover, an operational mode, which causes one path to undergo worst-case aging, is defined as the \textit{critical operational mode} of the path. This way, the union of critical operational modes of all candidate paths is equivalent to the universe of operational modes. Therefore, attacking all candidate paths is a naïve method to guarantee the successful attack, based on the assumption. Nevertheless, it is very costly and may be impossible.
+In other words, no matter how users operate the design, at least one candidate path in the design undergoes worst-case aging. Moreover, given a path, if an operational mode leads the path to undergo worst-case aging, the operational mode is defined as the \textit{critical operational mode} of the path:
 
-Therefore, after observing the relationship among aging of paths, we find that the aging behaviors of many paths are highly correlated. If several paths are highly correlated in terms of aging behavior, one operational mode can lead all of them to age to a similar extent. Thus, we can simply attack one out of those highly correlated paths to cover multiple operational modes. For example, given two critical paths $A$ and $B$. Their critical operational modes are $O_{A}$ and $O_{B}$, respectively. Assume that $A$ and $B$ are highly correlated in terms of aging behavior. Because $A$ and $B$ age similarly/closely, $O_{A}$ causes $A$ to age in the worst-case and also causes $B$ to age severely. Consequently, even if we simply attack path $A$, not only $O_{A}$ but also $O_{B}$ can make the attack successful (i.e., shorten the lifetime of path $A$ to the interval [$n - \varepsilon, n + \varepsilon$]). This property helps reduce the count of targeted paths to be considered/formulated.
-To choose the attack targets (shortlist), we transform the relationship of paths to a directed graph (also known as digraph). In Figure~\ref{fig:graph}, vertices represent candidates and arcs (i.e., directed edges) are correlation coefficients ($R^2$) and linear regression equations between each pair of vertices. Each arc has a regression equation, whose coefficients are obtained by running functional simulation. $X_{i}$ denotes the worst-case aging rate of path $i$, whose exact value will be introduced in Section [Undefined]. $Y_{j}$ denotes the aging rate of path $j$ predicted based on the linear regression equation. Consider the orange equation in Figure~\ref{fig:graph}:
+\noindent \textbf{\uline{Definition: An operational mode, which leads the path to undergo worst-case aging, is defined as a critical operational mode of the path.}}
+
+This way, the following corollary can be obtained:
+
+\noindent \textbf{\uline{Corollary: The union of critical operational modes of all candidate paths is equivalent to the universe of operational modes.}}
+
+Therefore, attacking all candidate paths is a na\"ive method to guarantee the successful attack regardless of the users' workload variations. Nevertheless, it is very costly and may be impossible to attack all candidate paths. 
+However, while we attack the part of candidate paths, it is still possible to make the attack successful if we consider the correlation of aging behaviors among critical paths. Specifically speaking, we observe that the aging behaviors of many paths are highly correlated. For instance, given two critical paths A and B, suppose that A and B are highly correlated in terms of their aging behaviors, the critical operational mode of A, $O_{A}$, must lead A to age in the worst-case, according the aforementioned definition. In addition, $O_{A}$ also leads B to age to a similar extent because A and B age close/similarly. Consequently, even if we simply attack path $A$, both $O_{A}$ and  $O_{B}$ can make the attack successful. In short, we can simply attack one out of those highly correlated paths to cover multiple operational modes. This property helps reduce the count of targeted paths to be attacked.%considered/formulated.
+
+\subsection{Selection of Target Paths using MDS (Minimum Dominating Set)}
+\label{sec:frame:mds}
+Based on the aforementioned property of aging correlation of paths, a directed graph (also known as digraph) is constructed as shown in Figure~\ref{fig:graph}, where vertices represent candidates and arcs (i.e., directed edges) are correlation coefficients ($R^2$) and linear regression equations between each pair of vertices. Each arc has a regression equation, where $X_{i}$ denotes the worst-case aging rate of path $i$, $Y_{j}$ denotes the aging rate of path $j$ predicted based on the linear regression equation and the other coefficients are obtained by running functional simulation. The exact value of $X_{i}$ can be derived by the following predictive model presented in \cite{wang2007efficient}:
+\begin{equation}
+	\fontsize{8}{8} \selectfont
+	A \cdot \alpha^n \cdot t^n 
+	\label{eq:worst}
+\end{equation}
+where $A$ and $n$ are fitted constants, $\alpha$ denotes the stress duty cycle, and $t$ denotes time (unit is second). $\alpha$ is usually set to 0.5. $A$ and $n$ are fitted as 0.0039 and 0.2, respectively, after SPICE simulation.
+
+Consider the red equation in Figure~\ref{fig:graph}:
+\begin{equation}
+	\centering
+	\fontsize{8}{8} \selectfont
+	Y_{1} = 0.98 \cdot X_{2} - 0.02
+\end{equation}
+where $X_{2}$ is aging rate of vertex/path 2 and $Y_{1}$ is the aging rate of vertex/path 1, which can be predicted as 0.98 multiplied by $X_{2}$ minus 0.02.
+Moreover, after the graph is constructed, it is further simplified by removing some arcs, which indicate the weak aging correlation between pairs of paths/vertices.
+
+The cost of our proposed HTHs is the inserted DCC count. To minimize the cost, we select minimum-sized targets to cover/dominate all candidate paths in the digraph, such that all users' operational modes are considered based on the corollary. This problem is similar to a classical digraph problem, \textbf{Minimum Dominating Set (MDS)}:
+
+\textit{On digraph $G = (V, E)$, find a minimum-sized set of vertices $S \subseteq V$ such that $\forall y \notin S$, $\exists x \in S$, there exists an arc from $x$ to $y$. And we say that $y$ is dominated by $x$}.
+
+Therefore, the problem of selecting target paths to be attacked is transformed to a MDS-related digraph problem, which can be solved using the existing algorithms proposed in \cite{ore1962theory}\cite{natarajan1978optimum}.
+
+%Therefore, after observing the relationship among aging of paths, we find that the aging behaviors of many paths are highly correlated. If several paths are highly correlated in terms of aging behavior, one operational mode can lead all of them to age to a similar extent. Thus, we can simply attack one out of those highly correlated paths to cover multiple operational modes. For example, given two critical paths $A$ and $B$. Their critical operational modes are $O_{A}$ and $O_{B}$, respectively. Assume that $A$ and $B$ are highly correlated in terms of aging behavior. Because $A$ and $B$ age similarly/closely, $O_{A}$ causes $A$ to age in the worst-case and also causes $B$ to age severely. Consequently, even if we simply attack path $A$, not only $O_{A}$ but also $O_{B}$ can make the attack successful (i.e., control the lifetime of path $A$ within the interval [$n - \varepsilon, n + \varepsilon$]). This property helps reduce the count of targeted paths to be considered/formulated. 
+
+\begin{comment}
+To choose the attack targets (shortlist), we transform the relationship of paths to a directed graph (also known as digraph). In Figure~\ref{fig:graph}, vertices represent candidates and arcs (i.e., directed edges) are correlation coefficients ($R^2$) and linear regression equations between each pair of vertices. Each arc has a regression equation, whose coefficients are obtained by running functional simulation. %$X_{i}$ denotes the worst-case aging rate of path $i$, whose exact value will be introduced in Section [Undefined]. $Y_{j}$ denotes the aging rate of path $j$ predicted based on the linear regression equation. Consider the orange equation in Figure~\ref{fig:graph}:
+$X_{i}$ denotes the aging rate of path $i$. $Y_{j}$ denotes the aging rate of path $j$ predicted based on the linear regression equation. Consider the orange equation in Figure~\ref{fig:graph}:
 
 \begin{equation}
 	\centering
@@ -73,16 +123,17 @@ To choose the attack targets (shortlist), we transform the relationship of paths
 Given the worst-case aging rate of vertex/path 2, $X_{2}$, the aging rate of vertex/path 1, $Y_{1}$, can be predicted as 0.98 multiplied by $X_{2}$ minus 0.02.
 Before the shortlist is determined by selecting a subset of candidates in the graph, we can simplify the graph by removing some arcs which indicate the relationships of weak aging correlation between pairs of paths.
 
-The cost of our proposed HTHs is the inserted DCC count. To minimize the cost, we select minimum-sized targets to cover all candidate paths, that is, to dominate all candidate paths in the digraph, such that all users' operational modes are considered in the proposed Trojan attack, based on the assumption. This problem is similar to a classical digraph problem, \textbf{Minimum Dominating Set (MDS)}:
+The cost of our proposed HTHs is the inserted DCC count. To minimize the cost, we select minimum-sized targets to cover all candidate paths, that is, to dominate all candidate paths in the digraph, such that all users' operational modes are considered in the proposed Trojan attack, based on the corollary. This problem is similar to a classical digraph problem, \textbf{Minimum Dominating Set (MDS)}:
 
 \textit{On digraph $G = (V, E)$, find a minimum-sized set of vertices $S \subseteq V$ such that $\forall y \notin S$, $\exists x \in S$, there exists an arc from $x$ to $y$. And we say that $y$ is dominated by $x$}.
 
 Therefore, the problem of selecting target paths to be attacked is transformed to a MDS-related digraph problem, which can be solved using the existing algorithms proposed in \cite{ore1962theory}\cite{natarajan1978optimum}.
+\end{comment}
 %------- SAT  --------------------------------------------------------------------------------------------------
 
 
 \subsection{SAT-based Problem Formulation and Encoding for DCC Deployment}
-\label{sec:SAT}
+\label{sec:frame:sat}
 \begin{comment}
 	\begin{figure*}[!ht]
     	\centering
@@ -105,7 +156,7 @@ Therefore, the problem of selecting target paths to be attacked is transformed t
        	\caption{A DCC deployment leads path $p$ to fail prematurely}
     	\label{fig:sec:prefail}
 \end{figure}
-After the shortlist (i.e., target paths to be attacked) is determined, the problem of DCC deployment on their associated clock paths is formulated as a \textbf{Boolean satisfiability (SAT)} problem. The key of the framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thus, DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of 3 types of DCCs can be chosen (i.e., 20\%, 40\%, and 80\% DCCs). Including the DCC-free case where no DCC is inserted, there are 4 possibilities of DCC insertion for each clock buffer. Given a clock buffer $p$, the four possibilities of DCC insertion at the input of buffer $p$ can be encoded as follows using two Boolean variables $B_{p,2}$ and $B_{p,1}$:
+After the shortlist (i.e., target paths to be attacked) is determined, the problem of DCC deployment on their associated clock paths is formulated as a \textbf{Boolean satisfiability (SAT)} problem. The authors of~\cite{wu2018maui} also use the SAT-based approach to determine the DCC deployment in the existing clock tree, while they insert DCCs to improve aging tolerance of designs. The key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thus, DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of 3 types of DCCs can be chosen (i.e., 20\%, 40\%, and 80\% DCCs). Including the DCC-free case where no DCC is inserted, there are 4 possibilities of DCC insertion for each clock buffer. Given a clock buffer $p$, the four possibilities of DCC insertion at the input of buffer $p$ can be encoded as follows using two Boolean variables $B_{p,2}$ and $B_{p,1}$:
 
 {\small
 \begin{tabular}{ c c c }

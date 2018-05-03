@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  2 MAY 2018 22:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.24)  3 MAY 2018 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -26,7 +26,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
--- This is a 10 point document.
+-- This is a 9 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
 \CLASSINFOnormalsizeunitybaselineskip=\dimen107
 \IEEEnormaljot=\dimen108
@@ -45,6 +45,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8.5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -55,14 +60,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
@@ -73,11 +73,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 \IEEEquantizedlength=\dimen109
@@ -912,6 +907,9 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip110
 \algorithmicindent=\skip111
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
 \c@class=\count411
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -934,20 +932,20 @@ LaTeX Warning: Label `fig:exp' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
--- Lines per column: 56 (exact).
+-- Lines per column: 61 (exact).
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count412
@@ -994,12 +992,12 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 57.
-Package biblatex Info: Reference segment=0 on input line 57.
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 57.
+. Activating mapping `default' on line 64.
 .................................................
  Excluding 'comment' comment.
 
@@ -1025,14 +1023,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]) (./motivate.tex
-Excluding 'comment' comment.
-<figures/exp.png, id=13, 994.71625pt x 382.42876pt>
+Excluding 'comment' comment. <figures/exp.png, id=13, 1166.3575pt x 517.935pt>
 File: figures/exp.png Graphic file (type png)
- <use figures/exp.png>
-Package pdftex.def Info: figures/exp.png used on input line 19.
-(pdftex.def)             Requested size: 252.0pt x 96.88489pt.
 
-Excluding 'comment' comment.
+<use figures/exp.png>
+Package pdftex.def Info: figures/exp.png used on input line 19.
+(pdftex.def)             Requested size: 252.0pt x 111.89915pt.
+ Excluding 'comment' comment.
 LaTeX Font Info:    Calculating math sizes for size <> on input line 41.
 
 
@@ -1077,7 +1074,7 @@ File: figures/flow.png Graphic file (type png)
 <use figures/flow.png>
 Package pdftex.def Info: figures/flow.png used on input line 6.
 (pdftex.def)             Requested size: 226.79846pt x 141.25497pt.
- Excluding 'comment' comment. [2 <./figures/exp.png> <./figures/flow.png>]
+ Excluding 'comment' comment.
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 28.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
@@ -1085,29 +1082,35 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+ [2 <./figures/exp.png> <./figures/flow.png>]
+Underfull \hbox (badness 1527) in paragraph at lines 59--62
+\OT1/ptm/m/n/9 where $\OT1/cmr/m/n/9 ^^A\OML/cmm/m/it/9 t[]$ \OT1/ptm/m/n/9 is 
+the prop-a-ga-tion de-lay shift caused by
+ []
 
-<figures/graph.png, id=23, 904.37875pt x 674.52pt>
+<figures/graph.png, id=23, 885.3075pt x 689.57625pt>
 File: figures/graph.png Graphic file (type png)
  <use figures/graph.png>
-Package pdftex.def Info: figures/graph.png used on input line 52.
-(pdftex.def)             Requested size: 226.79846pt x 169.1545pt.
-Missing character: There is no ï in font ptmr7t!
+Package pdftex.def Info: figures/graph.png used on input line 66.
+(pdftex.def)             Requested size: 201.60077pt x 157.02089pt.
+
+Underfull \hbox (badness 1721) in paragraph at lines 73--74
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
 
 [3 <./figures/graph.png>] Excluding 'comment' comment.
+Excluding 'comment' comment.
 <figures/upper.png, id=29, 1023.825pt x 277.035pt>
 File: figures/upper.png Graphic file (type png)
  <use figures/upper.png>
-Package pdftex.def Info: figures/upper.png used on input line 104.
+Package pdftex.def Info: figures/upper.png used on input line 155.
 (pdftex.def)             Requested size: 226.79846pt x 61.36638pt.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 162.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8.5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
 
-Excluding 'comment' comment.) (./lifetime.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.55556> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
- Excluding 'comment' comment.
-[4 <./figures/upper.png>]) (./exp_other.tex
-<figures/benchmarkinfo.png, id=33, 586.19pt x 212.795pt>
+Excluding 'comment' comment.) (./lifetime.tex) (./exp_other.tex [4 <./figures/u
+pper.png>] <figures/benchmarkinfo.png, id=33, 586.19pt x 212.795pt>
 File: figures/benchmarkinfo.png Graphic file (type png)
 
 <use figures/benchmarkinfo.png>
@@ -1149,12 +1152,19 @@ File: figures/3mp5y.png Graphic file (type png)
  <use figures/3mp5y.png>
 Package pdftex.def Info: figures/3mp5y.png used on input line 39.
 (pdftex.def)             Requested size: 201.60077pt x 100.79686pt.
- [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <./figures/benchmarkinfo.png> <./figures/s384173y.png> <./figures/s384175y.
-png> <./figures/des3y.png> <./figures/des5y.png> <./figures/3mp4y.png> <./figur
-es/3mp5y.png>])
+
+LaTeX Warning: Reference `LT_1' on page 5 undefined on input line 58.
+
+
+LaTeX Warning: Reference `LT_2' on page 5 undefined on input line 58.
+
+
+LaTeX Warning: Reference `LT_2' on page 5 undefined on input line 58.
+
+) [5] [6 <./figures/benchmarkinfo.png> <./figures/s384173y.png> <./figures/s384
+175y.png> <./figures/des3y.png> <./figures/des5y.png> <./figures/3mp4y.png> <./
+figures/3mp5y.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1166,10 +1176,15 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (./main.aux)
+[7
+
+] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1183,13 +1198,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20828 strings out of 492995
- 390680 string characters out of 6132703
- 678670 words of memory out of 5000000
- 24129 multiletter control sequences out of 15000+600000
- 574667 words of font info for 109 fonts, out of 8000000 for 9000
+ 20846 strings out of 492995
+ 390973 string characters out of 6132703
+ 678788 words of memory out of 5000000
+ 24146 multiletter control sequences out of 15000+600000
+ 571692 words of font info for 111 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 45i,20n,45p,10375b,12112s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,10n,45p,10375b,12122s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
@@ -1205,7 +1220,7 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 st/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 627672 bytes).
+Output written on main.pdf (7 pages, 649573 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
