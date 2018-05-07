@@ -2,9 +2,14 @@
 set xlabel "Years"
 set ylabel "Instances Count"
 set terminal png font " Times_New_Roman,12 " 
-set output "LT_distribution.png"
+set output "s384175y1.png"
 set xtics 1 ,1 ,12
 set key left 
+
+
+
+
+
 
 
 set terminal png enhanced
