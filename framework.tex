@@ -59,7 +59,7 @@ where $\Delta t_{p\_aged}$ is BTI-induced shift of propagation delay, and $C$ is
 	\Delta t_{p\_intrinsic} = C \cdot \Delta V_{th\_pv}
 	\label{eq:vtodelay2}
 \end{equation}	
-where $\Delta t_{p\_intrinsic}$ is the propagation delay shift caused by $\Delta V_{th\_pv}$. Through the previous deduction of delay model with the consideration of PVs and BTI, the model is built to calculate the corresponding $\Delta t_{p_aged}$ and $\Delta t_{p_intrinsic}$ according to the specified $\Delta V_{th\_pv}$. The model is not only used in the classification of critical paths, but also used in Section~\ref{sec:lt_estimation} while estimating the lifetime intervals of attacked designs. 
+where $\Delta t_{p\_intrinsic}$ is the propagation delay shift caused by $\Delta V_{th\_pv}$. Through the previous deduction of delay model with the consideration of PVs and BTI, the model is built to calculate the corresponding $\Delta t_{p\_aged}$ and $\Delta t_{p\_intrinsic}$ according to the specified $\Delta V_{th\_pv}$. The model is not only used in the classification of critical paths, but also used in Section~\ref{sec:lt_estimation} while estimating the lifetime intervals of attacked designs. 
 %------- Shortlist selection --------------------------------------------------------------------------------------------------
 \subsection{Selection of Target Paths (Shortlist) to Be Attacked Considering Workload Variations}
 \label{sec:frame:workload}
@@ -70,7 +70,7 @@ where $\Delta t_{p\_intrinsic}$ is the propagation delay shift caused by $\Delta
 	\label{fig:graph}
 \end{figure}
 
-The uncertainty of user-dependent operational modes (e.g., watching video, playing games) can influence/vary the aging behavior of logic paths. Therefore, we should ensure that the attack will succeed under any operational mode. We claim the following assumption, which is also used in Section~\ref{sec:lt_estimation} to estimate the lifetime interval of attacked designs:
+The uncertainty of user-dependent operational modes (e.g., watching video, playing games) can influence/vary the aging behaviors of logic paths. Therefore, we should ensure that the attack will succeed under any operational mode. We claim the following assumption, which is also used in Section~\ref{sec:lt_estimation} to estimate the lifetime interval of attacked designs:
 
 \noindent \textbf{\uline{Assumption: Every operational mode causes at least one candidate path to undergo severe aging.}}
 
