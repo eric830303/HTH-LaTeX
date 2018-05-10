@@ -148,9 +148,6 @@
          giveni={S\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
     \strng{namehash}{AS1}
     \strng{fullhash}{AS1}
     \field{labelnamesource}{author}
@@ -201,7 +198,7 @@
     \field{pages}{1229\bibrangedash 1247}
     \field{title}{Hardware Trojan attacks: threat analysis and countermeasures}
     \field{volume}{102}
-    \field{journaltitle}{Proceedings of the IEEE}
+    \field{journaltitle}{Proc. of the IEEE}
     \field{year}{2014}
   \endentry
 
@@ -245,9 +242,6 @@
          giveni={S\bibinitperiod},
       }}%
     }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
     \strng{namehash}{ZS1}
     \strng{fullhash}{ZS1}
     \field{labelnamesource}{author}
@@ -256,7 +250,6 @@
   International}
     \field{pages}{217\bibrangedash 217}
     \field{title}{The Negative Bias Temperature Instability in MOS Devices}
-    \field{year}{2006}
   \endentry
 
   \entry{chakravarthi2004comprehensive}{inproceedings}{}
@@ -292,19 +285,15 @@
          giveni={S\bibinitperiod},
       }}%
     }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
     \strng{namehash}{CS+1}
     \strng{fullhash}{CSKARVMCKS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Reliability Physics Symposium Proceedings, 2004. 42nd
-  Annual. 2004 IEEE International}
+    \field{booktitle}{Reliability Physics Symposium Proceedings. 42nd Annual.
+  2004 IEEE International}
     \field{pages}{273\bibrangedash 282}
     \field{title}{A comprehensive framework for predictive modeling of negative
   bias temperature instability}
-    \field{year}{2004}
   \endentry
 
   \entry{kimizuka1999impact}{inproceedings}{}
@@ -353,12 +342,11 @@
     \strng{fullhash}{KNYTMTYKIKHT1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{VLSI Technology, 1999. Digest of Technical Papers. 1999
+    \field{booktitle}{VLSI Technology. Digest of Technical Papers. 1999
   Symposium on}
     \field{pages}{73\bibrangedash 74}
     \field{title}{The impact of bias temperature instability for
   direct-tunneling ultra-thin gate oxide on MOSFET scaling}
-    \field{year}{1999}
   \endentry
 
   \entry{kumar2006analytical}{inproceedings}{}
@@ -389,12 +377,10 @@
     \strng{fullhash}{KSVKCHSSS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proceedings of the 2006 IEEE/ACM international conference
-  on Computer-aided design}
+    \field{booktitle}{Proc. of the 2006 ICCAD}
     \field{pages}{493\bibrangedash 496}
     \field{title}{An analytical model for negative bias temperature
   instability}
-    \field{year}{2006}
   \endentry
 
   \entry{wang2010impact}{article}{}
@@ -435,9 +421,6 @@
          given={Yu},
          giveni={Y\bibinitperiod},
       }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
     }
     \strng{namehash}{WW+1}
     \strng{fullhash}{WWYSBSVSLFCY1}
@@ -583,7 +566,7 @@
     \strng{fullhash}{YKHMDQATSD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Security and Privacy (SP), 2016 IEEE Symposium on}
+    \field{booktitle}{Security and Privacy (SP)}
     \field{pages}{18\bibrangedash 37}
     \field{title}{A2: Analog malicious hardware}
     \field{year}{2016}
@@ -633,8 +616,7 @@
     \field{pages}{5}
     \field{title}{MAGIC: Malicious aging in circuits/cores}
     \field{volume}{12}
-    \field{journaltitle}{ACM Transactions on Architecture and Code Optimization
-  (TACO)}
+    \field{journaltitle}{Proc. of TACO}
     \field{year}{2015}
   \endentry
 
@@ -706,8 +688,7 @@
     \strng{fullhash}{WSPM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proceedings of the 50th Annual Design Automation
-  Conference}
+    \field{booktitle}{Proc. of the 50th Annual Design Automation Conference}
     \field{pages}{144}
     \field{title}{The undetectable and unprovable hardware trojan horse}
     \field{year}{2013}
@@ -741,8 +722,7 @@
     \strng{fullhash}{WKCTTHLSC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Design, Automation \& Test in Europe Conference \&
-  Exhibition (DATE), 2018}
+    \field{booktitle}{Proc. of DATE}
     \field{pages}{527\bibrangedash 532}
     \field{title}{MAUI: Making aging useful, intentionally}
     \field{year}{2018}
@@ -762,9 +742,6 @@
          given={Victor},
          giveni={V\bibinitperiod},
       }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
     }
     \strng{namehash}{GAFCV1}
     \strng{fullhash}{GAFCV1}
@@ -814,8 +791,7 @@
     \strng{fullhash}{WWWZYSCY1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Computer-Aided Design, 2007. ICCAD 2007. IEEE/ACM
-  International Conference on}
+    \field{booktitle}{Proc. of ICCAD}
     \field{pages}{735\bibrangedash 740}
     \field{title}{An efficient method to identify critical gates under circuit
   aging}
@@ -919,8 +895,7 @@
     \strng{fullhash}{HSCJKBSLBHCHKJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Proceedings of the International Conference on
-  Computer-Aided Design}
+    \field{booktitle}{Proc. of ICCAD}
     \field{pages}{412\bibrangedash 419}
     \field{title}{Statistical aging analysis with process variation
   consideration}
@@ -973,8 +948,7 @@
     \strng{fullhash}{SCBJPFMAGWRH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{booktitle}{Reliability Physics Symposium (IRPS), 2017 IEEE
-  International}
+    \field{booktitle}{Proc. of IRPS}
     \field{pages}{2E\bibrangedash 4}
     \field{title}{On the influence of BTI and HCI on parameter variability}
     \field{year}{2017}
