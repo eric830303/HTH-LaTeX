@@ -6,10 +6,10 @@ In this section, we propose a method to estimate the lifetime interval of attack
 
 Based on the assumption, the union of critical operational modes of all candidate paths is equivalent to the universal set of operational modes, i.e., all operational modes. Thus, for the purpose of covering all operational modes, we have to consider the severe aging condition of each candidate path, such that the associated critical operational modes are applied to predict the lifetime of other paths using a binary search method.
 
-For example, given the candidate path $i$, the other path $j$, and time variable $t$, the goal of the method is to predict $j's$ lifetime by binarily searching toward a convergent $t$. That is, during the binary search, the timing variable $t$ will be iteratively calibrated according to the $j's$ setup timing constraint, formulated in Equation~(\ref{eq:setup}), and eventually $j's$ lifetime will converge toward the value of $t$. Where $j's$ aging rate is derived by the aging correlation between $i$ and $j$ (i.e., regression equation of $i$ on $j$) and $i's$ aging rate is derived using Equation~(\ref{eq:worst}). 
+For example, given the candidate path $i$, the other path $j$, and time variable $t$, the goal of the method is to predict $j's$ lifetime by binarily searching toward a convergent $t$. That is, during the binary search, the timing variable $t$ will be iteratively calibrated according to the $j's$ setup timing constraint, formulated in Equation~(\ref{eq:setup}), and eventually $j's$ lifetime will converge toward the value of $t$. Where $j's$ aging rate is derived by the aging correlation between $i$ and $j$ (i.e., regression equation of $i$ on $j$) and $i's$ aging rate is derived from Equation~(\ref{eq:worst}). 
 As a result, when $i$ is considered undergoing severe aging, we can obtain the other paths' lifetimes, among which we choose the smallest one as the lifetime of the attacked design.
 
-In accordance with the former procedure, we can derive one lifetime value of a path being compromised with malicious aging. By considering all candidate paths, we can derive a group of lifetime values, among which smallest one and biggest one are the resulting interval based on the attack.
+In accordance with the former procedure, we can derive one lifetime value of a path being compromised with malicious aging. By considering all candidate paths undergoing severe aging, we can derive a group of lifetime values, among which smallest one and biggest one are the resulting interval based on the attack.
 
 
   
