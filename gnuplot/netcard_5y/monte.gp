@@ -20,7 +20,7 @@ set grid
 
 
 ##------ DCC Count ----------------------------------------------------------------
-set label "DCC count: 1" at 6.6,360 center font "Times_New_Roman,22"
+set label "DCC count: 1" at 6.1,310 center font "Times_New_Roman,22"
 
 
 ##------ Dist. Intro. -------------------------------------------------------------
@@ -36,9 +36,11 @@ set label "DCC count: 1" at 6.6,360 center font "Times_New_Roman,22"
 
 ##------ PLOT --------------------------------------------------------------------
 plot \
-"netcard_5_15mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "15 mV", \
-"netcard_5_15mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 5 ps 2 lc 1 notitle , \
-"netcard_5_20mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "20 mV", \
-"netcard_5_20mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 6 ps 2 lc 2 notitle, \
-"netcard_5_25mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 3 title "25 mV", \
-"netcard_5_25mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 7 ps 2 lc 3 notitle, \
+"shifted_netcard_5_5mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "10 mV", \
+"shifted_netcard_5_5mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 5 ps 2 lc 1 notitle , \
+"shifted_netcard_5_10mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "15 mV", \
+"shifted_netcard_5_10mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 6 ps 2 lc 2 notitle, \
+"shifted_netcard_5_15mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 3 title "20 mV", \
+"shifted_netcard_5_15mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 7 ps 2 lc 3 notitle, \
+#"netcard_4_20mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 8 ps 2 lc 4 title "20 mV", \
+#"netcard_4_20mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 8 ps 2 lc 4 notitle, \
