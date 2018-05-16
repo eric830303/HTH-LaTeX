@@ -21,14 +21,14 @@ set grid
 
 
 ##------ DCC Count ----------------------------------------------------------------
-set label "DCC count: 5" at 4.5,405 center font "Times_New_Roman,22"
+set label "DCC count: 5" at 4.5,395 center font "Times_New_Roman,22"
 
 
 ##------ PLOT --------------------------------------------------------------------
 plot \
-"15mV.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "15 mV", \
-"20mV.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "20 mV", \
-"25mV.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 3 title "25 mV", \
+"15mV.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "10 mV", \
+"20mV.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "15 mV", \
+"25mV.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 3 title "20 mV", \
 
 
 #"des_3_15mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "15 mV", \

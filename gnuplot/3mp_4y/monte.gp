@@ -19,15 +19,15 @@ set label "[n-{/Symbol e},n+{/Symbol e}]" at 4.1,170 center font "Times_New_Roma
 set grid 
 
 ##------ DCC Count ----------------------------------------------------------------
-set label "DCC count: 2" at 5.5,165 center font "Times_New_Roman,22"
+set label "DCC count: 2" at 5.5,160 center font "Times_New_Roman,22"
 
 
 plot \
-"15mV.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "15 mV", \
+"15mV.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "10 mV", \
 "15mV.txt" using 1:3 with linespoints linewidth 2 pt 5 ps 2 lc 1 notitle , \
-"20mV.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "20 mV", \
+"20mV.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "15 mV", \
 "20mV.txt" using 1:3 with linespoints linewidth 2 pt 6 ps 2 lc 2 notitle, \
-"25mV.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 3 title "25 mV", \
+"25mV.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 3 title "20 mV", \
 "25mV.txt" using 1:3 with linespoints linewidth 2 pt 7 ps 2 lc 3 notitle, \
 
 #"3mp_3_15mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 1 title "15 mV", \
