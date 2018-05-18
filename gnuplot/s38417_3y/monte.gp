@@ -32,25 +32,27 @@ set arrow 9 from 2.8,30  to 2.8,480 nohead filled lw 1 #R line
 set arrow 10 from 2.3,300  to 2.1,300 head filled lw 2 #R line
 
 ##------ Box (right) -----------------------------------------------------------------------
-set arrow 11 from 3,30  to 3.6,30  nohead filled lw 1 #B line
-set arrow 12 from 3,300 to 3.6,300 nohead filled lw 1 #U line
+set arrow 11 from 3,30  to 3.5,30  nohead filled lw 1 #B line
+set arrow 12 from 3,300 to 3.5,300 nohead filled lw 1 #U line
 set arrow 13 from 3,30  to 3,300 nohead filled lw 1 #L line
-set arrow 14 from 3.6,30  to 3.6,300 nohead filled lw 1 #R line
-set arrow 15 from 3.6,170  to 4,250 head filled lw 2 #R line
+set arrow 14 from 3.5,30  to 3.5,300 nohead filled lw 1 #R line
+set arrow 15 from 3.5,150  to 3.7,180 head filled lw 2 #R line
 
 ##------ DCC Count ----------------------------------------------------------------
 #(1) DCC Count
 set label "DCC count: 12" at 4.5,440 center font "Times_New_Roman,22"
 #(2) Left Box
-set label "Left peaks:" at 1.05,390 font "Times_New_Roman,20"
-set label "The distributions of lower" at 1.05,350  font "Times_New_Roman,20"
-set label "bounds of lifetime" at 1.05,310  font "Times_New_Roman,20"
-set label "intervals of instances" at 1.05,270  font "Times_New_Roman,20"
+set label "Left peaks:" at 1.05,360 font "Times_New_Roman,20"
+set label "The lower-bound " at 1.05,320 font "Times_New_Roman,20"
+set label "distributions  " at 1.05,280  font "Times_New_Roman,20"
+set label "of lifetime interval" at 1.05,240  font "Times_New_Roman,20"
+set label "across all instances" at 1.05,200  font "Times_New_Roman,20"
 #(3) Right Box
-set label "Right peaks:" at 3.65,390 font "Times_New_Roman,20"
-set label "The distributions of upper" at 3.65,350  font "Times_New_Roman,20"
-set label "bounds of lifetime" at 3.65,310  font "Times_New_Roman,20"
-set label "intervals of instances" at 3.65,270  font "Times_New_Roman,20"
+set label "Right peaks:" at 3.55,360 font "Times_New_Roman,20"
+set label "The upper-bound" at 3.55,320  font "Times_New_Roman,20"
+set label "distributions" at 3.55,280  font "Times_New_Roman,20"
+set label "of lifetime interval" at 3.55,240  font "Times_New_Roman,20"
+set label "across all instances" at 3.55,200  font "Times_New_Roman,20"
 
 
 ##------ Dist. Intro. -------------------------------------------------------------
