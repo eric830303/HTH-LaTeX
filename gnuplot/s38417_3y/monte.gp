@@ -42,17 +42,17 @@ set arrow 15 from 3.5,150  to 3.7,180 head filled lw 2 #R line
 #(1) DCC Count
 set label "DCC count: 12" at 4.5,440 center font "Times_New_Roman,22"
 #(2) Left Box
-set label "Left peaks:" at 1.05,360 font "Times_New_Roman,20"
-set label "The lower-bound " at 1.05,320 font "Times_New_Roman,20"
-set label "distributions  " at 1.05,280  font "Times_New_Roman,20"
-set label "of lifetime interval" at 1.05,240  font "Times_New_Roman,20"
-set label "across all instances" at 1.05,200  font "Times_New_Roman,20"
+set label "Left peaks:" at 1.05,360 font "Times_New_Roman,19"
+set label "The lower-bound " at 1.05,320 font "Times_New_Roman,19"
+set label "distributions  " at 1.05,280  font "Times_New_Roman,19"
+set label "of lifetime interval" at 1.05,240  font "Times_New_Roman,19"
+set label "across all instances" at 1.05,200  font "Times_New_Roman,19"
 #(3) Right Box
-set label "Right peaks:" at 3.55,360 font "Times_New_Roman,20"
-set label "The upper-bound" at 3.55,320  font "Times_New_Roman,20"
-set label "distributions" at 3.55,280  font "Times_New_Roman,20"
-set label "of lifetime interval" at 3.55,240  font "Times_New_Roman,20"
-set label "across all instances" at 3.55,200  font "Times_New_Roman,20"
+set label "Right peaks:" at 3.55,360 font "Times_New_Roman,19"
+set label "The upper-bound" at 3.55,320  font "Times_New_Roman,19"
+set label "distributions" at 3.55,280  font "Times_New_Roman,19"
+set label "of lifetime interval" at 3.55,240  font "Times_New_Roman,19"
+set label "across all instances" at 3.55,200  font "Times_New_Roman,19"
 
 
 ##------ Dist. Intro. -------------------------------------------------------------
