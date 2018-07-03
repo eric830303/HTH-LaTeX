@@ -818,35 +818,5 @@
     \field{volume}{38}
     \field{year}{1962}
   \endentry
-
-  \entry{natarajan1978optimum}{article}{}
-    \name{author}{2}{}{%
-      {{hash=NK}{%
-         family={Natarajan},
-         familyi={N\bibinitperiod},
-         given={KS},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=WLJ}{%
-         family={White},
-         familyi={W\bibinitperiod},
-         given={Lee\bibnamedelima J},
-         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Elsevier}%
-    }
-    \strng{namehash}{NKWLJ1}
-    \strng{fullhash}{NKWLJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{number}{6}
-    \field{pages}{261\bibrangedash 265}
-    \field{title}{Optimum domination in weighted trees}
-    \field{volume}{7}
-    \field{journaltitle}{Information processing letters}
-    \field{year}{1978}
-  \endentry
 \endsortlist
 \endinput

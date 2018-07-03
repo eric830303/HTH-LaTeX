@@ -2,40 +2,45 @@
 \label{sec:frame}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\columnwidth]{flow.png}
+	\includegraphics[width=1\columnwidth]{flow.png}
 	\caption{DCC insertion flow}
 	\label{fig:flow}
 \end{figure}
-The overall flow of the proposed framework for DCC insertion/deployment is depicted in Figure~\ref{fig:flow}. The proposed framework focuses on the three issues: 
+The overall flow of the proposed framework for DCC insertion/deployment is depicted in Figure~\ref{fig:flow}. The proposed framework focuses on the four issues: 
 \begin{enumerate}[wide, labelwidth=!, labelindent=0pt]%[leftmargin=*]
-	\item \textbf{Overhead minimization}: Attacking all critical paths may be infeasible or may increase the used DCC count, which means the area overhead of the attack is not acceptable. Thus, the framework must filter/rule out the unpromsing critical paths so as to make the attack successful and to minimize the DCC count.
-	\item \textbf{Process variations (PVs)}: The effects of PVs on logic paths may compromise the lifetime accuracy of the proposed Trojan attack. Consequently, Monte-Carlo simulations are conducted, such that we can truly simulate the uncertainty of PVs in a statistical manner, and precisely force the attacked designs to fail around the specified time under the influence of PVs.  .
-	\item \textbf{Workload variations}: Because users' workload have strong impact on the degradation of logic paths, the proposed framework must consider users' various operational modes (i.e., workload). Hence, the problem of selecting target paths to be attacked is transformed to a graph problem, solved by the existing algorithms. 
+	\item \textbf{Overhead minimization} (Section~\ref{sec:frame:cp} and~\ref{sec:frame:mds}): Attacking all critical paths may be infeasible or may increase the used DCC count, which means the area overhead of the attack is not acceptable. Thus, the framework must filter/rule out the unpromsing critical paths so as to make the attack successful and to minimize the DCC count. %The issue is addressed in Section~\ref{sec:frame:cp} and~\ref{sec:frame:mds}.
+	\item \textbf{Process variations (PVs)} (Section~\ref{sec:frame:cp} and~\ref{sec:frame:cor}): The effects of PVs on logic paths may compromise the lifetime accuracy of the proposed Trojan attack. Consequently, Monte-Carlo simulations are conducted, such that we can truly simulate the uncertainty of PVs in a statistical manner, and precisely force the attacked designs to fail around the specified time under the influence of PVs. %The issue is addressed in Section~\ref{sec:frame:cp} and~\ref{sec:frame:cor}. 
+	\item \textbf{Workload variations} (Section~\ref{sec:frame:workload}): Because users' workload have strong impact on the degradation of logic paths, the proposed framework must consider users' various operational modes (i.e., workload). Hence, the problem of selecting target paths to be attacked is transformed to a graph problem, solved by the existing algorithms. %The issue is addressed in Section~\ref{sec:frame:workload}.
+	\item \textbf{DCC deployment} (Section~\ref{sec:frame:sat}): To control the lifetime of design near the expected lifetime under the proposed HTH attack, the problem of DCC deployment is formulated as a Boolean satisfiability (SAT) problem, solved by existing SAT solver such as MiniSat.
 \end{enumerate}
 
 
-The section is organized as follows: Section~\ref{sec:frame:cp} discusses the PV-aware methodology of classifying critical paths, considering the correlation between PVs and BTI, introduced in Section~\ref{sec:frame:cor}. Section~\ref{sec:frame:workload} details the observation of aging correlation among critical paths. The observation is used in our workload-aware methodology, explained in Section~\ref{sec:frame:mds}, in order to select target paths to be attacked. Finally, Section~\ref{sec:frame:sat} introduces the SAT-based formulation of DCC deployment.
+%The section is organized as follows: Section~\ref{sec:frame:cp} discusses the PV-aware methodology of classifying critical paths, considering the correlation between PVs and BTI, introduced in Section~\ref{sec:frame:cor}. Section~\ref{sec:frame:workload} details the observation of aging correlation among critical paths. The observation is used in our workload-aware methodology, explained in Section~\ref{sec:frame:mds}, in order to select target paths to be attacked. Finally, Section~\ref{sec:frame:sat} introduces the SAT-based formulation of DCC deployment.
+
 \subsection{Classification of Critical Paths Considering PVs in a Statistical Manner}
+%\subsection{PV-aware Classification of Critical Paths}
 \label{sec:frame:cp}
-Given a critical path, the path is classified as one of following three groups: 1) \textit{Shortlist}, 2) \textit{Candidate}, and 3) \textit{Mine}, depending on the lifetime\footnote{The lifetime of a critical path is defined as when the timing violation occurs on the path, in the presence of aging.} distribution\footnote{Given a critical path, a DCC deployment on the associated clock paths results in an individual lifetime value of the critical path. Thus, various DCC deployments result in a group of lifetime values, forming the lifetime distribution of the given critical path.} of the critical path, under all possible DCC deployments on the associated clock network. The lifetime distribution of the path is further separated into the three time intervals, which are defined as follows: $[0, n - \varepsilon]$, $[n - \varepsilon, n + \varepsilon]$, and $[n + \varepsilon, \infty]$, where $n$ is the expected lifetime of designs under the proposed HTH attack and $\varepsilon$ is maximum tolerable error. The classification of critical paths can be determined by separating their lifetime distributions within above intervals. 
+Given a critical path, the path is classified as one of following three groups: 1) \textit{Shortlist}, 2) \textit{Candidate}, and 3) \textit{Mine}, depending on the lifetime\footnote{The lifetime of a critical path is defined as when the timing violation occurs on the path, in the presence of aging.} distribution\footnote{Given a critical path, a DCC deployment on the associated clock paths results in an individual lifetime value of the critical path. Thus, various DCC deployments result in a group of lifetime values, forming the lifetime distribution of the given critical path.} of the critical path, under all possible DCC deployments on the associated clock network. The lifetime distribution of the path is further separated into the three time intervals, which are defined as follows: $[0, n - \varepsilon]$, $[n - \varepsilon, n + \varepsilon]$, and $[n + \varepsilon, \infty]$\footnote{$n$ is the expected lifetime of designs under the proposed HTH attack and $\varepsilon$ is maximum tolerable error.}. The classification of critical paths can be determined by separating their lifetime distributions within above intervals. 
 \begin{enumerate}[wide, labelwidth=!, labelindent=0pt]%[leftmargin=*]
 	\item \textit{Candidate}: A critical path is defined as a candidate if there exists at least one DCC deployment, which leads the critical path to fail within $[n - \varepsilon, n + \varepsilon]$.
-	\item \textit{Mine}: A critical path is defined as a mine if it satisfies the following conditions: ($i$) The path is not a candidate, that is, there is no DCC deployment to control the path lifetime within $[n - \varepsilon, n + \varepsilon]$. ($ii$) On the associated clock paths, there exists at least one DCC deployment, which leads the critical path to fail within $[0, n - \varepsilon]$, i.e., it lead the critical path to fail prematurely.
+	\item \textit{Mine}: A critical path is defined as a mine if it satisfies the following conditions: ($i$) The path is not a candidate, that is, there is no DCC deployment to control the path lifetime within $[n - \varepsilon, n + \varepsilon]$. ($ii$) On the associated clock paths, there exists at least one DCC deployment, which leads the critical path to fail within $[0, n - \varepsilon]$ (i.e., prematurely)%, i.e., it lead the critical path to fail prematurely.
 	\item \textit{Shortlist}:  The collection of critical paths in shortlist is the subset of \textit{Candidate}, which are selected as target paths.
 \end{enumerate}
 
 Note that, because of PVs, it is impossible to precisely control the lifetime of designs at the expected lifetime $n$, namely within the \textit{desired lifetime interval}  $[n - \varepsilon, n + \varepsilon]$. Thus, we conduct Monte-Carlo simulation of logic path delays from a statistical perspective. The simulation is performed by imposing extra $V_{th}$ offset (i.e., $\Delta V_{th\_pv}$) on each transistor of logic paths. Then, we check the setup-time constraint, as depicted in Equation~(\ref{eq:setup}), considering the correlation of PVs and BTI, introduced in the next subsection. 
 
 \subsection{Path Delay Estimation Considering the Correlation between PVs and BTI}
+%\subsection{Correlation between PVs and BTI}
 \label{sec:frame:cor}
-The correlation is a long-term phenomenon that bridges the $V_{th}$ differences among the transistors over a period. Further, a positive/negative $V_{th}$ offset leads to a higher/lower fresh $V_{th}$, causing a lower/higher aging rate. Therefore, the gap between high and low $V_{th}$ will be gradually converged toward a steady value. We use the model proposed in~\cite{gomez2016early} to estimate the correlation between fresh $V_{th}$ offset (caused by PVs) and BTI effects:
+The correlation is a long-term phenomenon that bridges the $V_{th}$ differences among the transistors over a period. %Further, a positive/negative $V_{th}$ offset leads to a higher/lower fresh $V_{th}$, causing a lower/higher aging rate. Therefore, the gap between high and low $V_{th}$ will be gradually converged toward a steady value. 
+We use the model proposed in~\cite{gomez2016early} to estimate the correlation between fresh $V_{th}$ offset (caused by PVs) and BTI effects:
 \begin{equation}
 	\centering
 	\fontsize{9}{9} \selectfont
 	\Delta V_{th\_bti} = (1 - S_{v} \cdot \Delta V_{th\_pv})  \cdot A \cdot \alpha^n \cdot t^n
 	\label{eq:cor}
 \end{equation}
-where $\Delta V_{th\_pv}$ is the fresh $V_{th}$ offset caused by PVs. $\Delta V_{th\_bti}$ is the BTI-induced $V_{th}$ shift, $\alpha$ is the stress duty cycle, $A$ is $3.9 \times 10^{-3} V \cdot s^{-1/_5}$, $n$ is time exponential constant, 0.2 for used technology, and $S_{v}$ is the sensitivity factor extracted by fitting HSPICE simulation results in 45nm TSMC technology. So far, given a specific $\Delta V_{th\_pv}$ imposed on the $V_{th}$ of a transistor, we use Equation~(\ref{eq:cor}) to derive the corresponding $\Delta V_{th\_bti}$. Then, the model is proposed in~\cite{wang2007efficient} to derive the shift of propagation delay by given specific $\Delta V_{th\_pv}$ and corresponding $\Delta V_{th\_bti}$:
+where $\Delta V_{th\_pv}$ is the fresh $V_{th}$ offset caused by PVs. $\Delta V_{th\_bti}$ is the BTI-induced $V_{th}$ shift, $\alpha$ is the stress duty cycle, $A$ is $3.9 \times 10^{-3} V \cdot s^{-1/_5}$, $n$ is time exponential constant, 0.2 for used technology, and $S_{v}$ is the sensitivity factor extracted by fitting HSPICE simulation results in 45nm TSMC technology. So far, given a specific $\Delta V_{th\_pv}$ imposed on the $V_{th}$ of a transistor, we use Equation~(\ref{eq:cor}) to derive the corresponding $\Delta V_{th\_bti}$. Then, the model proposed in~\cite{wang2007efficient} is used to derive the shift of propagation delay by given specific $\Delta V_{th\_pv}$ and corresponding $\Delta V_{th\_bti}$:
 \begin{equation}
 	\centering
 	\fontsize{9}{9} \selectfont
@@ -48,24 +53,26 @@ where $\Delta D_{p}$ is the shift of propagation delay. Through the deduction of
 \label{sec:frame:workload}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\columnwidth]{graph.png}
+	%\includegraphics[width=0.75\columnwidth]{graph_4.png} %ATS-Reviewer
+	\includegraphics[width=0.6\columnwidth]{graph.png}
 	\caption{Example of graph used in choosing targets}
 	\label{fig:graph}
 \end{figure}
 
-The uncertainty of user-dependent operational modes (e.g., watching video, playing games) can influence/vary the aging behaviors of logic paths. Therefore, we should ensure that the attack will succeed under any operational mode. We claim the following assumption, which is also used in Section~\ref{sec:lt_estimation} to estimate the lifetime interval of attacked designs:
+The uncertainty of user-dependent operational modes (e.g., watching video, playing games) can influence the aging behaviors of logic paths. Therefore, we should ensure that the attack will succeed under any operational mode. We claim the following assumption and definition.%, which is also used in Section~\ref{sec:lt_estimation} to estimate the lifetime interval of attacked designs:
 
 {\setlength{\parskip}{3pt}
 \noindent \textit{Assumption: Every operational mode will cause at least one candidate path to undergo severe aging.}
 
-On top of the assumption, no matter how users use the design, at least one candidate path undergoes severe aging. Moreover, we make the following definition to describe certain operation modes.
+%On top of the assumption, no matter how users use the design, at least one candidate path undergoes severe aging. 
+%Moreover, we make the following definition to describe certain operation modes.
 
 \noindent \textit{Definition: An operational mode, which leads the path to undergo severe aging, is defined as the critical operational mode of the path.}
 }
 
-In this way, the union of critical operational modes of all candidate paths is equivalent to the universal set of operational modes. Obviously, the most na\"ive method is attacking all candidate paths to guarantee the successful attack regardless of workload variations, while it is very costly and definitely impossible. Therefore, our goal is to attack such a fraction of candidate paths, which are still possible to make the attack successful if we consider the correlation of aging behaviors among critical paths. Specifically speaking, we observe that the aging behaviors of many paths are highly correlated. For instance, given that A and B are critical paths and they are highly correlated in terms of their aging behaviors, the critical operational mode of A, $O_{A}$, must lead A to age severely according to the aforementioned definition. In addition, $O_{A}$ will also lead B to a similar level of aging because A and B age closely/similarly. Consequently, even if we simply attack path $A$, the attack will work successfully under both $O_{A}$ and $O_{B}$. In short, we can simply attack one out of those highly correlated paths to cover multiple operational modes. This feature helps reduce the count of targeted paths to be attacked.%considered/formulated.
+In this way, the union of critical operational modes of all candidate paths is equivalent to the universal set of operational modes. Obviously, the most na\"ive method is attacking all candidate paths to guarantee the successful attack regardless of workload variations, while it is very costly and definitely impossible. Therefore, our goal is to attack such a fraction of candidate paths, which are still possible to make the attack successful if we consider the correlation of aging behaviors among critical paths. Specifically speaking, we observe that the aging behaviors of many paths are highly correlated. For instance, given that A and B are critical paths and they are highly correlated in terms of their aging behaviors, the critical operational mode of A, $O_{A}$, must lead A to age severely according to the aforementioned definition. In addition, $O_{A}$ will also lead B to a similar level of aging because A and B age closely/similarly. Consequently, even if we simply attack path $A$, the attack will work successfully under both $O_{A}$ and $O_{B}$. In short, we can simply attack one out of those highly correlated paths to cover multiple operational modes. This feature helps reduce the count of targeted paths to be attacked.
 
-\subsection{Selection of Target Paths Using MDS}
+\subsection{Selection of Target Paths Using Existing MDS Algorithm}
 \label{sec:frame:mds}
 Based on the aforementioned feature of aging correlation of paths, a directed graph (also known as digraph) is constructed as shown in Figure~\ref{fig:graph}, where vertices represent candidates and arcs (i.e., directed edges) indicate correlation coefficients ($R^2$) and linear regression equations between each pair of vertices. Each arc has a regression equation, where $X_{i}$ denotes the severe aging rate of path $i$, $Y_{j}$ denotes the aging rate of path $j$ predicted via the linear regression equation and the other coefficients are obtained by running functional simulation. The exact value of $X_{i}$ can be derived by the following predictive model presented in \cite{wang2007efficient}:
 \begin{equation}
@@ -75,6 +82,7 @@ Based on the aforementioned feature of aging correlation of paths, a directed gr
 \end{equation}
 where $A$ and $n$ are fitted constants, $\alpha$ denotes the stress duty cycle, and $t$ denotes time (unit second). $\alpha$ is usually set to 0.5. $A$ and $n$ are fitted as 0.0039 and 0.2, respectively, after SPICE simulation.
 
+\begin{comment}
 Consider the red equation in Figure~\ref{fig:graph}:
 \begin{equation}
 	\centering
@@ -83,15 +91,11 @@ Consider the red equation in Figure~\ref{fig:graph}:
 \end{equation}
 where $X_{2}$ is the aging rate of vertex/path 2 and $Y_{1}$ is the aging rate of vertex/path 1, which can be predicted as 0.98 multiplied by $X_{2}$ minus 0.02.
 Moreover, after the graph is constructed, it can be further simplified by as many weak arcs as possible, among which the aging correlations between pairs of paths/vertices are below the specified threshold.
-
-We aim to select the minimum-sized of targets, that is, the minimum dominating set in the digraph to cover all candidate paths. Such the proposed Trojan attack is capable of considering all users' operational modes based on the assumption. This problem is transformed to the classical digraph problem, Minimum Dominating Set (MDS), which can be solved using the existing algorithms proposed in \cite{ore1962theory}\cite{natarajan1978optimum}. %The MDS problem is defined as follow:
-
-%\textit{On digraph $G = (V, E)$, find a minimum-sized set of vertices $S \subseteq V$ such that $\forall y \notin S$, $\exists x \in S$, there exists an arc from $x$ to $y$. And we say that $y$ is dominated by $x$}.
-
-%Therefore, after observing the relationship among aging of paths, we find that the aging behaviors of many paths are highly correlated. If several paths are highly correlated in terms of aging behavior, one operational mode can lead all of them to age to a similar extent. Thus, we can simply attack one out of those highly correlated paths to cover multiple operational modes. For example, given two critical paths $A$ and $B$. Their critical operational modes are $O_{A}$ and $O_{B}$, respectively. Assume that $A$ and $B$ are highly correlated in terms of aging behavior. Because $A$ and $B$ age similarly/closely, $O_{A}$ causes $A$ to age in the severe and also causes $B$ to age severely. Consequently, even if we simply attack path $A$, not only $O_{A}$ but also $O_{B}$ can make the attack successful (i.e., control the lifetime of path $A$ within the interval [$n - \varepsilon, n + \varepsilon$]). This property helps reduce the count of targeted paths to be considered/formulated. 
-
+\end{comment}
+We aim to select the minimum-sized of targets, that is, the minimum dominating set in the digraph to cover all candidate paths. Such the proposed Trojan attack is capable of considering all users' operational modes based on the assumption. This problem is transformed to the classical digraph problem, Minimum Dominating Set (MDS), which can be solved using the existing algorithms proposed in \cite{ore1962theory}. %The MDS problem is defined as follow:
+%\textit{On digraph $G = (V, E)$, find a minimum-sized set of vertices $S \subseteq V$ such that $\forall y \notin S$, $\exists x \in S$, there exists an arc from $x$ to $y$. And we say that $y$ is dominated by $x$}. 
 %------- SAT  --------------------------------------------------------------------------------------------------
-\subsection{SAT-based Formulation and Encoding for DCC Deployment}
+\subsection{SAT-based Formulation for DCC Deployment}
 \label{sec:frame:sat}
 \begin{comment}
 	\begin{figure*}[!ht]
@@ -119,8 +123,9 @@ We aim to select the minimum-sized of targets, that is, the minimum dominating s
 \end{figure}
 \end{comment}
 After the shortlist is determined using existing MDS algorithms, the problem of DCC deployment is formulated as a \textbf{Boolean satisfiability (SAT)} problem. %The authors of~\cite{wu2018maui} also use the SAT-based approach to determine the DCC deployment in the existing clock tree, while they aim to improve aging tolerance of designs. 
-The key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. Thus, DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of 3 types of DCCs can be chosen (i.e., 20\%, 40\%, and 80\% DCCs). Including the DCC-free case (i.e., no DCC is inserted), there are 4 possibilities of DCC insertion for each clock buffer. Given a clock buffer $p$, the four possibilities of DCC insertion at the input of buffer $p$ can be encoded using the  following two Boolean variables $B_{p,2}$ and $B_{p,1}$:
-
+The key of our framework is to represent the problem in \textit{conjunctive normal form} (CNF). %A CNF representation is a conjunction of one or more clauses, where each clause is a disjunction of one or more Boolean variables. 
+Thus, DCC deployment is encoded into Boolean representation for SAT-based formulation. %Thus, DCC deployment/insertion needs to be encoded into Boolean representation before being transformed into a SAT-based formulation. Assume that a total of 3 types of DCCs can be chosen (i.e., 20\%, 40\%, and 80\% DCCs). Including the DCC-free case (i.e., no DCC is inserted), there are 4 possibilities of DCC insertion for each clock buffer. Given a clock buffer $p$, the four possibilities of DCC insertion at the input of buffer $p$ can be encoded using the following two Boolean variables $B_{p,2}$ and $B_{p,1}$:
+\begin{comment}
 {\small
 \begin{tabular}{ c c c }
    & DCC type & $\left\{B_{p,2},B_{p,1}\right\}$ \\
@@ -129,11 +134,12 @@ The key of our framework is to represent the problem in \textit{conjunctive norm
   (3)\quad & 40\% &  \{1,0\} \\
   (4)\quad & 80\% &  \{1,1\} \\
 \end{tabular}}
-
+\end{comment}
 To control the lifetime of designs within $[n - \varepsilon, n + \varepsilon]$, timing constraints of DCC deployments are formulated in the SAT-based problem, depending on the classification of critical paths.
 \begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
-	\item Paths in shortlist: Because lifetime of shortlist paths dominate the lifetime of attacked designs, we have to control the lifetime of shortlist paths within $[n - \varepsilon, n + \varepsilon]$. Thus, on their associated clock paths, we formulate all the DCC deployments, which lead the path to fail prematurely or post-maturely (i.e., within $[ 0, n - \varepsilon]$ or within $[ n + \varepsilon, \infty]$), such that the SAT solver will not output the corresponding deployment in the result if the CNF is satisfiable.
-	\item Other paths (paths not in shortlist): While attacking shortlist paths, the DCC deployment may cause the premature failure of other paths excluded in shortlist, because they have significant share of the common sub-paths, and lead the proposed Trojan attack to be premature or inaccurate. Thus, to allow the attack effectively and avoid picking up the unsuitable paths to compromise, we formulate all the DCC deployments, which lead the paths to fail prematurely, such that the SAT solver will not output the corresponding deployment in the result if the CNF is satisfiable.  
+	\item Paths in shortlist: Because lifetime of shortlist paths dominate the lifetime of attacked designs, we have to control the lifetime of shortlist paths within $[n - \varepsilon, n + \varepsilon]$. Thus, on their associated clock paths, we formulate all the DCC deployments, which lead the path to fail prematurely or post-maturely (i.e., $[ 0, n - \varepsilon]$ or $[ n + \varepsilon, \infty]$), such that the SAT solver will not output the corresponding deployment in the result if the CNF is satisfiable.
+	\item Other paths: While attacking shortlist paths, the DCC deployment may cause the premature failure of other paths excluded in shortlist, because they have significant share of the common sub-paths, and lead the proposed Trojan attack to be premature or inaccurate. %Thus, to allow the attack effectively and avoid picking up the unsuitable paths to compromise, we formulate all the DCC deployments, which lead the paths to fail prematurely, such that the SAT solver will not output the corresponding deployment in the result if the CNF is satisfiable. 
+	Thus, we formulate all the DCC deployments, which lead the paths to fail prematurely, such that the SAT solver will not output the corresponding deployment in the result if the CNF is satisfiable. 
 \end{enumerate}
 
 \begin{comment}

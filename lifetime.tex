@@ -36,7 +36,7 @@ For example, given the candidate path $i$, the other path $j$, and time variable
 In accordance with the former procedure, we can derive one lifetime value of a path which has been compromised with malicious aging. In cases of all candidate paths undergoing severe aging, we can derive a group of lifetime values, among which smallest one and biggest one are the resulting interval boundaries, and they also represent the earliest and latest fail time points, on behalf of the consequence of implanted Trojan.
 
 \subsection{Estimation of the Probability that Attacked Design Fails in the Desired Lifetime Interval}
-Since the exact fail time point depends to a certain level on users's workload, therefore, we take it for granted that, the probability distribution of lifetime within the resulting interval can be viewed as a normal distribution. In this way, we can derive the PDF (Probability Density Function) of lifetime. Thus, the cumulative probability value of attacked design failing within $[n-\varepsilon, n+\varepsilon]$ can be calculated from the following equation:
+The exact fail time point depends on users's workload, therefore, we take it for granted that, the probability distribution of lifetime within the resulting interval can be viewed as a normal distribution. In this way, we can derive the PDF (Probability Density Function) of lifetime. Thus, the cumulative probability value of attacked design failing within $[n-\varepsilon, n+\varepsilon]$ can be calculated from the following equation:
 \begin{equation}
 	\label{eq:pdf}
 		P_{c} = \int_{n-\varepsilon}^{n+\varepsilon} f_{pd}(t) \,\mathrm{d}t
