@@ -12,10 +12,14 @@ As a result, when $i$ is considered undergoing severe aging, we can obtain the o
 
 In accordance with the former procedure, we can derive one lifetime value of a path being compromised with malicious aging. By considering all candidate paths undergoing severe aging, we can derive a group of lifetime values, among which smallest one and biggest one are the resulting interval based on the attack.
 \end{comment}
-%-------?????------------------
+%-------ATS------------------
 \section{LIFETIME AND PROBABILITY ESTIMATION}
 \label{sec:lt_estimation}
-In this section, we propose a method to estimate the lifetime intervals of attacked designs. Then, based on the resulting interval, we further derive the probability values of attacked designs which can be interpreted as a relative likelihood that the design would fail within the desired lifetime interval $[n-\varepsilon, n+\varepsilon]$.
+%In this section, we propose a method to estimate the lifetime intervals of attacked designs. Then, based on the resulting interval, we further derive the probability values of attacked designs which can be interpreted as a relative likelihood that the design would fail within the desired lifetime interval $[n-\varepsilon, n+\varepsilon]$.
+In this section, we propose a method to estimate the lifetime intervals of attacked designs. The intervals are used to further derive the probability values, interpreted as a relative likelihood that the design would fail within $[n-\varepsilon, n+\varepsilon]$.
+
+%-------ATS For reviewer to read------------------
+\begin{comment}
 \subsection{Estimation of the Lifetime Interval of Attacked Design}
 Based on the assumption, the union of critical operational modes of all candidate paths is equivalent to the universal set of operational modes, i.e., all operational modes. Thus, for the purpose of covering all operational modes, we have to consider the severe aging condition of each candidate path with the associated critical operational modes for predicting the lifetime of other paths using a binary search method.
 
@@ -23,6 +27,14 @@ For example, given the candidate path $i$, the other path $j$, and time variable
 As a result, when $i$ is considered undergoing severe aging, we can obtain the other paths' lifetimes, among which we choose the smallest one as the lifetime of the attacked design.
 
 In accordance with the former procedure, we can derive one lifetime value of a path which has been compromised with malicious aging. In cases of all candidate paths undergoing severe aging, we can derive a group of lifetime values, among which smallest one and biggest one are the resulting interval boundaries, and they also represent the earliest and latest fail time points, on behalf of the consequence of implanted Trojan.
+\end{comment}
+%-------ATS Camera-Ready version (Simplified version)------------------
+\subsection{Estimation of the Lifetime Interval of Attacked Design}
+To cover all operational modes while estimating lifetime interval, we have to consider the severe aging condition of each candidate path with the associated critical operational modes for predicting the lifetime of other paths using a binary search method.
+For example, given the candidate path $i$, the other path $j$, and time variable $t$, during the binary search, $t$ will be iteratively calibrated according to the $j's$ setup timing constraint, formulated in Equation~(\ref{eq:setup}), and eventually $j's$ lifetime will converge toward the value of $t$. %Where $i's$ aging rate and $j's$ counterpart can be derived from Equation~(\ref{eq:worst}) and from the aging correlation between $i$ and $j$, respectively. As a result, when $i$ is considered undergoing severe aging, we can obtain the other paths' lifetimes, among which we choose the smallest one as the lifetime of the attacked design.
+
+In accordance with the former procedure, we can derive one lifetime value of a path which has been compromised with malicious aging. In cases of all candidate paths undergoing severe aging, we can derive a group of lifetime values, among which smallest one and biggest one are the resulting interval boundaries, and they also represent the earliest and latest fail time points, on behalf of the consequence of implanted Trojan.
+
 \subsection{Estimation of the Probability that Attacked Design Fails in the Desired Lifetime Interval}
 Since the exact fail time point depends to a certain level on users's workload, therefore, we take it for granted that, the probability distribution of lifetime within the resulting interval can be viewed as a normal distribution. In this way, we can derive the PDF (Probability Density Function) of lifetime. Thus, the cumulative probability value of attacked design failing within $[n-\varepsilon, n+\varepsilon]$ can be calculated from the following equation:
 \begin{equation}
