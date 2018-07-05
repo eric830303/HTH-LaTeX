@@ -666,34 +666,6 @@
     \field{year}{2012}
   \endentry
 
-  \entry{wei2013undetectable}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=WS}{%
-         family={Wei},
-         familyi={W\bibinitperiod},
-         given={Sheng},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=PM}{%
-         family={Potkonjak},
-         familyi={P\bibinitperiod},
-         given={Miodrag},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {ACM}%
-    }
-    \strng{namehash}{WSPM1}
-    \strng{fullhash}{WSPM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{booktitle}{Proc. of the 50th Annual Design Automation Conference}
-    \field{pages}{144}
-    \field{title}{The undetectable and unprovable hardware trojan horse}
-    \field{year}{2013}
-  \endentry
-
   \entry{wu2018maui}{inproceedings}{}
     \name{author}{3}{}{%
       {{hash=WKC}{%

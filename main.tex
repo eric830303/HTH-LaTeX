@@ -1,5 +1,5 @@
  
-\documentclass[10pt, conference]{IEEEtran}
+\documentclass[conference,compsocconf]{IEEEtran}
 
 \usepackage{xcolor}
 \usepackage{lipsum}
@@ -34,6 +34,7 @@
 \usepackage{amsthm}
 \newtheorem*{mydef}{Definition:}
 \newtheorem*{myasm}{Assumption:}
+
 %\usepackage[ top=0.75in, bottom=0.75in, left=0.64in, right=0.64in]{geometry}
 %\usepackage[ bottom=0.9in]{geometry}
 %\usepackage[ left=0.8in, right=0.8in]{geometry}
@@ -63,19 +64,44 @@
 \renewcommand*{\bibfont}{\footnotesize}
 
 % correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
+%\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\makeatletter
+
+%%%%%%%%%%%for copyright notice
+\def\ps@IEEEtitlepagestyle{%
+    \def\@oddfoot{\mycopyrightnotice}%
+    \def\@evenfoot{}%
+}
+\def\mycopyrightnotice{%
+    %{\footnotesize  978-1-4799-6773-5/14/\$31.00 \textcopyright2018 IEEE\hfill}
+    %\gdef\mycopyrightnotice{}
+}
+%%%%%%%%%%%
+
+\makeatletter
+\newcommand{\algrule}[1][.2pt]{\par\vskip.5\baselineskip\hrule height #1\par\vskip.5\baselineskip}
+\makeatother
+
+\makeatletter
+\newcommand*\titleheader[1]{\gdef\@titleheader{#1}}
+\AtBeginDocument{%
+    \let\st@red@title\@title
+    \def\@title{%
+        \bgroup\normalfont\large\centering\@titleheader\par\egroup
+        \vskip1.5em\st@red@title}
+}
+\makeatother
+
 
 
 \begin{document}
 
-\font\myfont=cmr12 at 18pt
-\title{\huge Lifetime Reliability Trojan based on Exploring Malicious Aging}
-%{\fontsize{8pt}{7pt}\selectfont \title{Lifetime Reliability Trojan based on Exploring Malicious Aging} }
+\title{Lifetime Reliability Trojan based on Exploring Malicious Aging}
+\titleheader{2018 IEEE 27th Asian Test Symposium}
 
 
-% author names and affiliations
-% use a multiple column layout for up to three different
-% affiliations
 
 
 \author{\IEEEauthorblockN{Tien-Hung Tseng, Shou-Chun Li and Kai-Chiang Wu}
@@ -96,23 +122,24 @@
 % in the abstract
 
 \input abstract
+
+\renewcommand\IEEEkeywordsname{Keywords}
+\begin{IEEEkeywords}
+lifetime Trojan; duty cycle; aging; timing violation
+\end{IEEEkeywords}
+
+%\IEEEpubid{0000--0000/00\$00.00?\copyright?2018 IEEE}
+
+
 \input introduction
-%\input related
 \input motivate
 \input framework
 \input lifetime
-%\input instance
-%\input exp_set_correlation
 \input exp_other
 
 
 \IEEEpeerreviewmaketitle
-
-
-
 \printbibliography
-
-
 
 
 % that's all folks
