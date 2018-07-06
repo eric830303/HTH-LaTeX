@@ -105,6 +105,11 @@ S.~Burman, A.~Palchaudhuri, R.~S. Chakraborty, D.~Mukhopadhyay, and P.~Singh,
   \emph{Progress in VLSI Design and Test}.\hskip 1em plus 0.5em minus
   0.4em\relax Springer, 2012, pp. 190--197.
 
+\bibitem{wei2013undetectable}
+S.~Wei and M.~Potkonjak, ``The undetectable and unprovable hardware trojan
+  horse,'' in \emph{Proc. of the 50th Annual Design Automation
+  Conference}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, p. 144.
+
 \bibitem{wu2018maui}
 K.-C. Wu, T.-H. Tseng, and S.-C. Li, ``Maui: Making aging useful,
   intentionally,'' in \emph{Proc. of DATE}.\hskip 1em plus 0.5em minus
@@ -123,5 +128,17 @@ W.~Wang, Z.~Wei, S.~Yang, and Y.~Cao, ``An efficient method to identify
 \bibitem{ore1962theory}
 O.~Ore, \emph{Theory of graphs}.\hskip 1em plus 0.5em minus 0.4em\relax
   American Mathematical Society, 1962, vol.~38.
+
+\bibitem{han2011statistical}
+S.~Han, J.~Choung, B.-S. Kim, B.~H. Lee, H.~Choi, and J.~Kim, ``Statistical
+  aging analysis with process variation consideration,'' in \emph{Proc. of
+  ICCAD}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE Press, 2011, pp.
+  412--419.
+
+\bibitem{schlunder2017influence}
+C.~Schl{\"u}nder, J.~Berthold, F.~Proebster, A.~Martin, W.~Gustin, and
+  H.~Reisinger, ``On the influence of bti and hci on parameter variability,''
+  in \emph{Proc. of IRPS}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2017,
+  pp. 2E--4.
 
 \end{thebibliography}
