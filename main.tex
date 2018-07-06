@@ -18,7 +18,6 @@
 \let\endalgorithm\relax
 \usepackage[linesnumbered,boxed,ruled]{algorithm2e}
 \usepackage{csquotes}
-\usepackage[style=ieee,backend=bibtex8,maxnames=3,minnames=1,sorting=none]{biblatex}
 \usepackage[version=4]{mhchem}
 \usepackage[bottom]{footmisc}
 \usepackage[normalem]{ulem}
@@ -36,8 +35,6 @@
 \newtheorem*{myasm}{Assumption:}
 
 %\usepackage[ top=0.75in, bottom=0.75in, left=0.64in, right=0.64in]{geometry}
-%\usepackage[ bottom=0.9in]{geometry}
-%\usepackage[ left=0.8in, right=0.8in]{geometry}
 % graphics path
 \graphicspath{{figures/}}
 % figure name bold
@@ -46,25 +43,8 @@
 \renewcommand{\tablename}{\textbf{Table}}
 % footnote mark
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-% add bib resource
-\addbibresource{main.bib} 
-% class format
-\newtheoremstyle{mystyle}  % Name
-  {}%                                     % Space above
-  {}%                                     % Space below
-  {}%                                     % Body font
-  {}%                                     % Indent amount
-  {\bfseries}%                       % Theorem head font
-  {:}%                                    % Punctuation after theorem head
-  { }%                                    % Space after theorem head, ' ', or \newline
-  {}%                                     % Theorem head spec (can be left empty, meaning `normal')
-\theoremstyle{mystyle}
-\newtheorem{class}{Class}
-%bibtex font size
-\renewcommand*{\bibfont}{\footnotesize}
 
-% correct bad hyphenation here
-%\hyphenation{op-tical net-works semi-conduc-tor}
+\hyphenation{op-tical net-works semi-conduc-tor}
 
 
 \makeatletter
@@ -80,26 +60,9 @@
 }
 %%%%%%%%%%%
 
-\makeatletter
-\newcommand{\algrule}[1][.2pt]{\par\vskip.5\baselineskip\hrule height #1\par\vskip.5\baselineskip}
-\makeatother
-
-\makeatletter
-\newcommand*\titleheader[1]{\gdef\@titleheader{#1}}
-\AtBeginDocument{%
-    \let\st@red@title\@title
-    \def\@title{%
-        \bgroup\normalfont\large\centering\@titleheader\par\egroup
-        \vskip1.5em\st@red@title}
-}
-\makeatother
-
-
-
 \begin{document}
 
 \title{Lifetime Reliability Trojan based on Exploring Malicious Aging}
-\titleheader{2018 IEEE 27th Asian Test Symposium}
 
 
 
@@ -123,11 +86,11 @@
 
 \input abstract
 
-\renewcommand\IEEEkeywordsname{Keywords}
+%\renewcommand\IEEEkeywordsname{Keywords}
 \begin{IEEEkeywords}
 lifetime Trojan; duty cycle; aging; timing violation
 \end{IEEEkeywords}
-
+%\IEEEpeerreviewmaketitle
 %\IEEEpubid{0000--0000/00\$00.00?\copyright?2018 IEEE}
 
 
@@ -137,12 +100,10 @@ lifetime Trojan; duty cycle; aging; timing violation
 \input lifetime
 \input exp_other
 
+%\printbibliography
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,main.bib}
 
-\IEEEpeerreviewmaketitle
-\printbibliography
-
-
-% that's all folks
 \end{document}
 
 
