@@ -40,7 +40,7 @@ set object Y circle at 5.64,100 size scr 0.007 fc rgb "navy" lw 1
 X2=4.34
 set arrow 9 from X2,0   to   X2,180 head nofilled lw 1
 set label "4.34 yr" at 4.03,185 font "Times_New_Roman,19"
-set arrow 10 from X2,Y   to   3.9,180 head nofilled lw 1
+set arrow 10 from X2,Y   to   3.9,180 head nofilled lw 2
 set label "There exist 100" at 3.1,250 font "Times_New_Roman,19"
 set label "instances whose" at 3.1,220 font "Times_New_Roman,19"
 set label "upper bounds" at 3.1,190 font "Times_New_Roman,19"
