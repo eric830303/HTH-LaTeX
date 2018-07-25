@@ -21,9 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{wilson2013international}
-L.~Wilson, ``International technology roadmap for semiconductors ({ITRS}),''
-  \emph{Semiconductor Industry Association}, 2013.
+\bibitem{semiconductor2015international}
+\BIBentryALTinterwordspacing
+ International technology roadmap for semiconductors (itrs), 2015. [Online].
+  Available: \url{http://www.itrs2.net/itrs-reports.html}
+\BIBentrySTDinterwordspacing
 
 \bibitem{tehranipoor2011trustworthy}
 M.~Tehranipoor, H.~Salmani, X.~Zhang, M.~Wang, R.~Karri, J.~Rajendran, and

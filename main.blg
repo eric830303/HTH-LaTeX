@@ -20,37 +20,37 @@ Warning--empty year in kumar2006analytical
 Done.
 You've used 23 entries,
             4087 wiz_defined-function locations,
-            1480 strings with 21964 characters,
-and the built_in function-call counts, 19718 in all, are:
-= -- 1549
+            1480 strings with 22000 characters,
+and the built_in function-call counts, 19664 in all, are:
+= -- 1535
 > -- 511
 < -- 180
 + -- 277
 - -- 88
-* -- 954
-:= -- 2827
+* -- 948
+:= -- 2817
 add.period$ -- 56
 call.type$ -- 23
 change.case$ -- 22
 chr.to.int$ -- 420
 cite$ -- 27
-duplicate$ -- 1379
-empty$ -- 1602
+duplicate$ -- 1372
+empty$ -- 1600
 format.name$ -- 107
-if$ -- 4643
+if$ -- 4628
 int.to.chr$ -- 0
 int.to.str$ -- 23
-missing$ -- 237
-newline$ -- 92
+missing$ -- 239
+newline$ -- 94
 num.names$ -- 23
-pop$ -- 562
+pop$ -- 574
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1510
+skip$ -- 1499
 stack$ -- 0
-substring$ -- 1010
-swap$ -- 1152
+substring$ -- 1009
+swap$ -- 1148
 text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 5
