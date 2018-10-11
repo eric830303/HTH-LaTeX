@@ -26,14 +26,9 @@ set label "DCC count: 5" at 4.5,395 center font "Times_New_Roman,22"
 
 ##------ PLOT --------------------------------------------------------------------
 plot \
-"15mV.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 7 title "10 mV", \
-"20mV.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "15 mV", \
-"25mV.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 6 title "20 mV", \
-
-
-#"des_3_15mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 7 title "15 mV", \
-#"des_3_15mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 5 ps 2 lc 7 notitle , \
-#"des_3_20mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "20 mV", \
-#"des_3_20mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 6 ps 2 lc 2 notitle, \
-#"des_3_25mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 6 title "25 mV", \
-#"des_3_25mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 7 ps 2 lc 6 notitle, \
+"shifted_des_3_10mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 5 ps 2 lc 7 title "10 mV", \
+"shifted_des_3_10mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 5 ps 2 lc 7 notitle , \
+"shifted_des_3_15mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 6 ps 2 lc 2 title "15 mV", \
+"shifted_des_3_15mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 6 ps 2 lc 2 notitle, \
+"shifted_des_3_20mV_dist.txt" using 1:2 with linespoints linewidth 2 pt 7 ps 2 lc 6 title "20 mV", \
+"shifted_des_3_20mV_dist.txt" using 1:3 with linespoints linewidth 2 pt 7 ps 2 lc 6 notitle, \
